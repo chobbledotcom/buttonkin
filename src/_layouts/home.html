@@ -1,5 +1,15 @@
 ---
-layout: base.html
+layout: default.html
 ---
 
-{{ content }}
+<div class="row">
+  <div class="col-md-9 page page--home margin--bottom">{{ content }}</div>
+  <div class="col-md-3 centered">
+    <img
+      alt="a button person with a magic staff"
+      class="right-rail-logo"
+      src="/assets/logo_transparent_bg.png"
+    />
+    {% include "social-media-links.html" %}
+  </div>
+</div>

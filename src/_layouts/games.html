@@ -1,0 +1,34 @@
+---
+layout: default.html
+---
+
+<div class="row">
+  <div class="col-md-9 margin--bottom">
+    {% include "title.html" %}
+    <div class="page {{page.cssClass}}">
+      {% include "banner.md" %}
+      <ul class="content-list">
+        {% assign games_list = collection.games | sort: 'order' %}
+        {% for game in games_list %}
+        <li>
+          <a class="content-link" href="{{ game.url }}">
+            <img class="content-thumb" src="{{game.thumbsrc}}" />
+            <h4>{{ game.title | escape }}</h4>
+          </a>
+          <p>{{ game.subtitle | escape }}</p>
+          {% if game.external %}
+          <p class="content-available">
+            Available on {% for ext in game.external %} {% if forloop.last ==
+            true and forloop.length > 1 %}and {% endif %}
+            <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
+            forloop.last != true and forloop.length > 2 %}, {% endif %} {%
+            endfor %}
+          </p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% include "side-menu.html" %}
+</div>

@@ -1,0 +1,58 @@
+---
+layout: page.html
+---
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="content" itemprop="articleBody">
+    <em datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </em>
+    {{ content }}
+    <p>
+      Thanks for reading! If you want to hear from us monthly you can subscribe
+      to the Button Kin newsletter. If you already subscribe and you're enjoying
+      these posts, please tell your friends!
+    </p>
+  </div>
+  <div style="width: 60%; margin: auto">
+    <iframe
+      scrolling="no"
+      style="width: 100% !important; height: 150px; border: 0px !important"
+      src="https://buttondown.email/button_kin_games?as_embed=true"
+    ></iframe>
+  </div>
+  <div>
+    <div>
+      <h3>Other ways to keep up with Button Kin:</h3>
+      <ul>
+        <li>
+          Follow me on
+          <a href="https://buttonkin.itch.io/" target="_blank">Itch.io</a>
+        </li>
+        <li>
+          Follow me on
+          <a href="https://bsky.app/profile/yvris.bsky.social" target="_blank"
+            >Bluesky</a
+          >
+        </li>
+        <li>
+          Follow me on
+          <a href="https://tumblr.com/button-kin-games" target="_blank"
+            >Tumblr</a
+          >
+        </li>
+        <li>
+          Follow me on
+          <a href="https://instagram.com/button_kin_games" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          Follow my
+          <a href="https://buttonkin.com/feed.xml" target="_blank">RSS feed</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,152 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./js/monster.js" defer></script>
+    <script src="./js/monster_maker.js" defer></script>
+    <script src="./js/monster_roll.js" defer></script>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-3">
+                <form class="create-monster monster" @submit.prevent="addMonster">
+                    <h3>Create a Monster</h3>
+                    <input id="name" type="text" placeholder="Monster Name" v-model="newName"/><br/>
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="hp">Hit Points:</label> 
+                            <input id="hp" type="number" v-model="newHP" :min="1"/>
+                        </div>
+                        <div class="col-sm">
+                            <label for="proficiency">Proficiency:</label> 
+                            <select id="proficiency" v-model="proficiency">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>  
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="strength">STR:</label> <span>{{newStrengthMod}}</span><br/>
+                            <input id="strength" type="number" class="ability-score" v-model="newStrength"/>
+                        </div>
+                        <div class="col-sm">
+                            <label for="dexterity">DEX:</label> <span>{{newDexterityMod}}</span><br/>
+                            <input id="dexterity" type="number" class="ability-score" v-model="newDexterity"/>
+                        </div>
+                        <div class="col-sm">
+                            <label for="constitution">CON:</label> <span>{{newConstitutionMod}}</span><br/>
+                            <input id="constitution" type="number" class="ability-score" v-model="newConstitution"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="intelligence">INT:</label> <span>{{newIntelligenceMod}}</span><br/>
+                            <input id="intelligence" type="number" class="ability-score" v-model="newIntelligence"/>
+                        </div>
+                        <div class="col-sm">
+                            <label for="wisdom">WIS:</label> <span>{{newWisdomMod}}</span><br/>
+                            <input id="wisdom" type="number" class="ability-score" v-model="newWisdom"/>
+                        </div>
+                        <div class="col-sm">
+                            <label for="charisma">CHA:</label> <span>{{newCharismaMod}}</span><br/>
+                            <input id="charisma" type="number" class="ability-score" v-model="newCharisma"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span v-if="addingSkill">
+                                <label for="skill-level">Level:</label>
+                                <select id="skill-level" v-model="newSkillLevel">
+                                    <option value="proficient">Proficient</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                                <label for="skills">Skill:</label><br>
+                                <select id="skills" v-model="newSkill">
+                                    <option v-for="skill in remainingSkills" v-bind:value="skill">{{skill}}</option>
+                                </select>
+                                <button class="add-skill" @click.prevent="addSkill()">Add</button>
+                            </span><span v-else v-on:click="openSkillForm">
+                                + add skill proficiencies
+                            </span>
+                            <span v-if="proficiencies.length > 0">Proficiencies: {{proficiencies.join(", ")}}</span><br/>
+                            <span v-if="expertise.length > 0">Expertise: {{expertise.join(", ")}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span v-if="addingAttack">
+                                Adding attack:<br>
+                                <label for="attack-name">Name:</label>
+                                <input id="attack-name" type="text" v-model="newAttackName"/>
+                                <label for="attack-type">Type</label>
+                                <select id="attack-type" v-model="newAttackType">
+                                    <option value="ranged">Ranged</option>
+                                    <option value="melee">Melee</option>
+                                </select>
+                                <span v-if="newAttackType == 'melee'">
+                                    <label for="attack-range">Reach:</label>
+                                </span>
+                                <span v-else>
+                                    <label for="attack-range">Range:</label>
+                                </span>
+                                <input id="attack-range" type="text" v-model="newAttackRange"/>
+                                <label for="attack-target">Targets</label>
+                                <input id="attack-target" type="number" v-model="newAttackTarget"/>
+                                <label for="attack-hit">Hit:</label>
+                                <input id="attack-hit" type="number" v-model="newAttackHit"/>
+                                <button @click.prevent="addAttack">add</button>
+                            </span><span v-else v-on:click="openAttackForm">
+                                + add attacks
+                            </span>
+                            <span v-if="attacks.length > 0">
+                                Attacks: {{attacks.length}}
+                            </span>
+                        </div>
+                    </div>
+                    <button type="submit">&plus;</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="monster-list row">
+                    <monster v-for="monster in monsters" 
+                        v-bind:key="monster.id"
+                        v-bind:name="monster.name"
+                        v-bind:hitpoints="monster.hitpoints"
+                        v-bind:Proficiency="monster.proficiency"
+                        v-bind:strength="monster.strength"
+                        v-bind:dexterity="monster.dexterity"
+                        v-bind:constitution="monster.constitution"
+                        v-bind:intelligence="monster.intelligence"
+                        v-bind:wisdom="monster.wisdom"
+                        v-bind:charisma="monster.charisma"
+                        v-bind:proficiencies="monster.proficiencies"
+                        v-bind:expertise="monster.expertise"
+                        v-bind:attacks="monster.attacks">
+                    </monster>
+                </div>
+            </div>
+            <div class="col-3 roll-report" id="roll-reporter">
+                <roll v-for="roll in rolls"
+                    v-bind:key="roll.id"
+                    v-bind:monstername="roll.monsterName"
+                    v-bind:rollstat="roll.rollStat"
+                    v-bind:displaytime="roll.displayTime"
+                    v-bind:dice="roll.dice"
+                    v-bind:mods="roll.mods"
+                    v-bind:result="roll.result"
+                    v-bind:chatcolor="roll.chatColor">
+                </roll>
+            </div>
+        </div>
+    </div>
+</body>

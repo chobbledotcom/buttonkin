@@ -1,0 +1,47 @@
+---
+layout: page.html
+---
+
+<div class="content" itemprop="articleBody">
+  {% if page.system %}
+  <h6>System: {{page.system | escape}}</h6>
+  {% endif %} {% if page.contentwarn %}
+  <p class="content-warn">Content warnings: {{page.contentwarn | escape}}</p>
+  {% endif %} {% if page.external %}
+  <p class="content-available">
+    Available on {% for ext in page.external %} {% if forloop.last == true and
+    forloop.length > 1 %}and {% endif %}
+    <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
+    forloop.last != true and forloop.length > 2 %}, {% endif %} {% endfor %}
+  </p>
+  {% endif %}
+
+  <p class="content-suitability">Suitable for {{page.suitability | escape}}.</p>
+
+  {{ content }} {% if page.reviews %}
+  <div class="content-reviews">
+    <h5>Kind words about <i>{{page.title | escape}}</i></h5>
+    {% for review in page.reviews %}
+    <p class="content-review">
+      <span>&ldquo;{{review.text | escape}}&rdquo;</span><br />- {{review.author
+      | escape}}
+    </p>
+    {% endfor %}
+  </div>
+  {% endif %} {% if page.itch_widget %}
+  <iframe
+    frameborder="0"
+    src="{{page.itch_widget.src}}"
+    width="100%"
+    height="167"
+    ><a href="{{page.itch_widget.url}}">{{page.title | escape}}</a></iframe
+  >
+  {% elsif page.external %}
+  <p class="content-available" style="float: right; bottom: 50px">
+    Available on {% for ext in page.external %} {% if forloop.last == true and
+    forloop.length > 1 %}and {% endif %}
+    <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
+    forloop.last != true and forloop.length > 2 %}, {% endif %} {% endfor %}
+  </p>
+  {% endif %}
+</div>

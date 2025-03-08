@@ -1,0 +1,32 @@
+<a href="/">
+	<div class="">
+		<img alt="A banner with lots of dice and the words 'Button Kin Games'" srcset="/assets/banner-500.png 500w, /assets/banner-680.png 680w, /assets/banner-920.png 920w, /assets/banner-1800.png 1800w" sizes="100vw" />
+	</div>
+</a>
+<nav class="navbar">
+	<div class="container">
+		<a class="navbar-brand" href="/">
+			<div class="row">
+				<div class="col-md-3"><img class="icon" alt="A button person with a magic staff" src="/assets/logo_icon.png"/></div>
+				<div class="col-md-9">Button Kin Games</div>
+			</div>
+		</a>
+		<div class="navbar__links align--right">
+			{% assign pages_list = collection.pages | sort: 'order' %} 
+			{% for my_page in pages_list %}
+			{% assign my_page = pages_list | where: "path", path | first %} 
+			{% if my_page.linkText %}
+			<a class="navbar__link" href="{{ my_page.url }}">
+				<i class="icon-{{ my_page.icon | escape }}"></i> {{ my_page.linkText | escape }}
+			</a>
+			{% endif %} 
+			{% endfor %}
+			<a class="navbar__link" href="/blog">
+				<i class="icon-newspaper"></i> Blog
+			</a>
+			<a class="navbar__link" href="https://buttonkingames.bigcartel.com">
+				<i class="icon-shop"></i> Shop
+			</a>
+		</div>
+	</div>
+</nav>

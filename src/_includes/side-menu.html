@@ -1,0 +1,22 @@
+<div class="col-md-3 margin--bottom centered">
+  <img
+    alt="a button person with a magic staff"
+    class="right-rail-logo"
+    src="/assets/logo_transparent_bg.png"
+  />
+  {% include "social-media-links.html" %}
+  <div class="bloglinks" style="margin: 20px auto 0 auto; width: 50%">
+    <h5>Latest blogs</h5>
+    <ol style="list-style: none; padding: 0">
+      {% for p in site.posts %} {% if forloop.index < 4 %}
+      <li style="margin-top: 20px">
+        <a href="{{ p.url | escape }}">
+          {{ p.title | escape }}<br />
+          <small>{{ p.subtitle | escape | truncate: 35 }}</small>
+        </a>
+      </li>
+      {% endif %} {% endfor %}
+      <li style="margin-top: 20px"><a href="/archive">More Posts &rarr;</a></li>
+    </ol>
+  </div>
+</div>
