@@ -32,10 +32,10 @@ itch_widget:
 ---
 
 <p>
-    <img src="/assets/images/bumbling/bee.png" style="width:80px;float:left">
+    <img src="/assets/images/bumbling/bee.png" style="width:80px;float:left" alt="">
     Welcome to the hive, worker-bee! You just hatched and your head is as fuzzy as your body. Your siblings are beckoning for you to join them at heart of the hive - the dance floor! This world is new and strange, and you don’t know your own name yet, but you think you might know a bit about dancing...
 </p>
 <p>
     In this game you'll learn your hive’s secret dance language, explore and map your world, make animal friends, and harvest pollen for your hive. This is a sweet, relaxing game to play on a rainy afternoon while journaling and doodling.
 </p>
-<img src="/assets/images/bumbling/hexes.png" style="width:400px;margin:auto;">
+<img src="/assets/images/bumbling/hexes.png" style="width:400px;margin:auto;" alt="">

@@ -24,7 +24,7 @@ reviews:
 ---
 
 <p>
-    <img src="/assets/images/fmogd/marie.png" style="width:200px;float:left;margin:-10px;">
+    <img src="/assets/images/fmogd/marie.png" style="width:200px;float:left;margin:-10px;" alt="">
     A haunted house, a missing person, a hint of wild fey magic, and an unexpected love story.
 </p>
 <p>
@@ -34,7 +34,7 @@ reviews:
     Sorcha vanished on her wedding day three years ago, sending her groom and neighbours alike into mourning. But where can she have gone? The only remaining clues to this mystery lie in her abandoned mansion home, where powers less wholesome have now taken up residence.
 </p>
 <p>
-    <img src="/assets/images/fmogd/map.png" style="width:300px;float:right">
+  <img src="/assets/images/fmogd/map.png" style="width:300px;float:right" alt="">
     The Dread Coven will not give up what they know so easily, although they will strike a bargain if you’re willing to pay the price in pain.
 </p>
 <p>

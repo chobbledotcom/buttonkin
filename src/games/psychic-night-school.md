@@ -29,6 +29,6 @@ itch_widget:
 <p>
     You're a budding psychic and have decided to take a night school class called “Introduction to the Spirit Realm with Mademoiselle Charlotte-Ann”. In this class you'll meet and get to know your fellow psychics, test your connection with the spirit realm, and create your own tarot cards before performing a reading for one of your classmates.
 </p>
-<img src="/assets/images/psychic-night-school/cover.png" style="width:200px;float:right;border-radius:4px;margin-left:10px;margin-bottom: 10px;">
+<img src="/assets/images/psychic-night-school/cover.png" style="width:200px;float:right;border-radius:4px;margin-left:10px;margin-bottom: 10px;" alt="">
 
 <p><i>May the spirits guide you to the top of the class!</i></p>

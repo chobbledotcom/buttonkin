@@ -20,7 +20,7 @@ itch_widget:
   }
 ---
 
-<img src="/assets/images/caltrop-kaiju/kaiju_map.png" style="width:300px;float:right;border-radius:4px;margin-left:10px;margin-bottom: 10px;">
+<img src="/assets/images/caltrop-kaiju/kaiju_map.png" style="width:300px;float:right;border-radius:4px;margin-left:10px;margin-bottom: 10px;" alt="">
 <p>
    A gigantic, rampaging kaiju (giant monster) has shown up in your home town and is destroying everything! You must head out to observe the kaiju to find its weakness, then pass on what you know to the military at their secret base so they can defeat this monster  - all while trying not to get eaten!
 </p>
