@@ -94,6 +94,7 @@ nav {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -126,6 +127,7 @@ a {
     font-size: 130%;
     .icon {
       height: 30px;
+      width: auto;
     }
     .col-md-3 {
       padding-right: 0;

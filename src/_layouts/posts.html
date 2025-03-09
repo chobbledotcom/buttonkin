@@ -1,33 +1,127 @@
 ---
 layout: default.html
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+  reverse: true
 ---
+
+{% assign page = pagination.pageNumber | plus: 1 %}
+{% assign total_pages = pagination.pages.length %}
 
 <div class="row">
   <div class="col-md-9 margin--bottom">
-    {% include "title.html" %}
-    <div class="page {{page.cssClass}}">
-      <ul class="content-list">
-        {% for post in site.posts %}
-        <li>
-          {% assign date_format = site.minima.date_format | default: "%b %-d,
-          %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h5>
-            <a class="post-link" href="{{ post.url }}"
-              >{{ post.title | escape }}</a
-            >
-            <br /><small>{{ post.subtitle | escape }}</small>
-          </h5>
-        </li>
-        {% endfor %}
-      </ul>
+    <div style="text-align: right">
+      {% include "title.html" %}
+      <!-- Pagination links -->
+      <div
+        class="pagination author"
+        style="margin-top: -23px; margin-bottom: 16px"
+      >
+        {% if page > 1 %}
+        <a href="{{ pagination.pageNumber | minus: 1 }}" class="previous"
+          >&larr; Previous</a
+        >
+        | {% endif %}
+        <span class="page_number">
+          Page {{ page }} of {{ total_pages }} |
+        </span>
+        {% if page < total_pages %}
+        <a href="/blog/page{{ page | plus: 1 }}" class="next"> Next &rarr; </a>
+        {% endif %}<br />
+        {% if pagination.total_pages > 1 %}
+        <a href="/archive">Archive</a>
+        {% endif %}
+      </div>
     </div>
-    <div style="width: 60%; margin: auto">
+
+    <!-- This loops through the paginated posts -->
+    {% for post in posts %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p class="author">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <span class="date">{{ post.date | date: date_format}}</span>
+    </p>
+    <div class="content">
+      {{ post.content }}
+      <div>
+        <h3>Other ways to keep up with Button Kin:</h3>
+        <ul>
+          <li>
+            Follow me on
+            <a href="https://buttonkin.itch.io/" target="_blank">Itch.io</a>
+          </li>
+          <li>
+            Follow me on
+            <a href="https://bsky.app/profile/yvris.bsky.social" target="_blank"
+              >Bluesky</a
+            >
+          </li>
+          <li>
+            Follow me on
+            <a href="https://tumblr.com/button-kin-games" target="_blank"
+              >Tumblr</a
+            >
+          </li>
+          <li>
+            Follow me on
+            <a href="https://medium.com/@button_kin_games" target="_blank"
+              >Medium</a
+            >
+          </li>
+          <li>
+            Follow me on
+            <a href="https://instagram.com/button_kin_games" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            Follow my
+            <a href="https://buttonkin.com/feed.xml" target="_blank"
+              >RSS feed</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p>
+        Thanks for reading! If you want to hear from me monthly you can
+        subscribe to my substack. If you already subscribe and you're enjoying
+        these posts, please tell your friends!
+      </p>
+      <em
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+      >
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+        %} {{ page.date | date: date_format }}
+      </em>
+    </div>
+    {% endfor %}
+    <div style="width: 100%; margin: auto">
       <iframe
         scrolling="no"
         style="width: 100% !important; height: 150px; border: 0px !important"
         src="https://buttondown.email/button_kin_games?as_embed=true"
       ></iframe>
+    </div>
+    <!-- Pagination links -->
+    <div class="pagination" style="float: right; text-align: right">
+      {% if pagination.previous_page %}
+      <a href="{{ pagination.previous_page_path }}" class="previous"
+        >&larr; Previous</a
+      >
+      | {% endif %}
+      <span class="page_number">
+        Page {{ pagination.page }} of {{ pagination.total_pages }} |
+      </span>
+      {% if pagination.next_page %}
+      <a href="{{ pagination.next_page_path }}" class="next">Next &rarr;</a>
+      {% endif %}
+      <br />
+      {% if pagination.total_pages > 1 %}
+      <a href="/archive">Archive</a>
+      {% endif %}
     </div>
   </div>
   {% include "side-menu.html" %}

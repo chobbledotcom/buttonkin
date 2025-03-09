@@ -8,14 +8,16 @@
   <div class="bloglinks" style="margin: 20px auto 0 auto; width: 50%">
     <h5>Latest blogs</h5>
     <ol style="list-style: none; padding: 0">
-      {% for p in site.posts %} {% if forloop.index < 4 %}
-      <li style="margin-top: 20px">
-        <a href="{{ p.url | escape }}">
-          {{ p.title | escape }}<br />
-          <small>{{ p.subtitle | escape | truncate: 35 }}</small>
-        </a>
-      </li>
-      {% endif %} {% endfor %}
+      {% for p in collections.post %}
+        {% if forloop.index < 4 %}
+          <li style="margin-top: 20px">
+            <a href="{{ p.url | escape }}">
+              {{ p.data.title | escape }}<br />
+              <small>{{ p.data.subtitle | escape | truncate: 35 }}</small>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
       <li style="margin-top: 20px"><a href="/archive">More Posts &rarr;</a></li>
     </ol>
   </div>

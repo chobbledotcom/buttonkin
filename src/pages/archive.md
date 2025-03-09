@@ -1,5 +1,5 @@
 ---
-layout: posts.html
+layout: postarchive.html
 cssClass: page--newsletter
 metaTitle: "Button Kin Blog Archive"
 title: "Button Kin Blog Archive"

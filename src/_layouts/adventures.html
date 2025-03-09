@@ -7,20 +7,26 @@ layout: default.html
     {% include "title.html" %}
     <div class="page {{page.cssClass}}">
       <ul class="content-list">
-        {% assign adventures_list = site.adventures | sort: 'order' %} {% for
-        adventure in adventures_list %}
+        {% assign adventures_list = collections.adventure | sort: 'data.order' %}
+        {% for adventure in adventures_list %}
         <li>
-          <a class="content-link" href="{{ adventure.url }}">
-            <img class="content-thumb" src="{{adventure.thumbsrc}}" />
+          <a
+            class="content-link"
+            href="{{ adventure.url }}">
+            <img
+              class="content-thumb"
+              src="{{ adventure.data.thumbsrc }}"
+              alt=""
+            />
             <h4>
-              {{ adventure.title | escape }} ({{adventure.system | escape}})
+              {{ adventure.data.title | escape }}
+              ({{ adventure.data.system | escape }})
             </h4>
           </a>
-          <p>{{ adventure.subtitle | escape }}</p>
-          {% if adventure.external %}
+          <p>{{ adventure.data.subtitle | escape }}</p>
+          {% if adventure.data.external %}
           <p class="content-available">
-            Available on {% for ext in adventure.external %} {% if forloop.last
-            == true and forloop.length > 1 %}and {% endif %}
+            Available on {% for ext in adventure.data.external %} {% if forloop.last == true and forloop.length > 1 %}and {% endif %}
             <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
             forloop.last != true and forloop.length > 2 %}, {% endif %} {%
             endfor %}
