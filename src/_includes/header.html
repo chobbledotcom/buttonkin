@@ -26,7 +26,8 @@
   			</a>
   			{% endif %} 
 			{% endfor %}
-			<a class="navbar__link" href="/blog">
+			{% assign latest_blog = collections.post | reverse | first %}
+			<a class="navbar__link" href="{{ latest_blog.url }}">
 				<i class="icon-newspaper"></i> Blog
 			</a>
 			<a class="navbar__link" href="https://buttonkingames.bigcartel.com">

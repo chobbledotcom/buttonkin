@@ -1,6 +1,5 @@
 ---
 layout: default.html
-permalink: "/newsletter/archive/"
 ---
 
 <div class="row">
@@ -8,16 +7,16 @@ permalink: "/newsletter/archive/"
     {% include "title.html" %}
     <div class="page {{page.cssClass}}">
       <ul class="content-list">
-        {% for post in site.posts %}
+        {% assign posts = collections.post | reverse %} {% for post in posts %}
         <li>
           {% assign date_format = site.minima.date_format | default: "%b %-d,
           %Y" %}
           <span class="post-meta">{{ post.date | date: date_format }}</span>
           <h5>
             <a class="post-link" href="{{ post.url }}"
-              >{{ post.title | escape }}</a
+              >{{ post.data.title | escape }}</a
             >
-            <br /><small>{{ post.subtitle | escape }}</small>
+            <br /><small>{{ post.data.subtitle | escape }}</small>
           </h5>
         </li>
         {% endfor %}
