@@ -8,7 +8,8 @@
   <div class="blog-links">
     <h5>Latest blogs</h5>
     <ul>
-      {% for p in collections.post %}
+      {% assign posts = collections.post | reverse %}
+      {% for p in posts %}
         {% if forloop.index < 4 %}
           <li>
             <a href="{{ p.url | escape }}">
