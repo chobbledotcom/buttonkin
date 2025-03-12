@@ -35,10 +35,10 @@ layout: page.html
   <div class="content-reviews">
     <h5>Kind words about <i>{{title | escape}}</i></h5>
     {% for review in reviews %}
-    <p class="content-review">
-      <span>&ldquo;{{review.text | escape}}&rdquo;</span><br />- {{review.author
-      | escape}}
-    </p>
+    <blockquote>
+      &ldquo;{{review.text | escape}}&rdquo;
+      <span>{{review.author | escape}}</span>
+    </blockquote>
     {% endfor %}
   </div>
   {% endif %}

@@ -439,11 +439,17 @@ hr {
   }
   .content-reviews {
     margin-top: 2em;
-  }
-  .content-review {
-    font-size: 90%;
-    span {
-      font-style: italic;
+    blockquote {
+      font-size: 1.2rem;
+      margin: 2rem auto;
+      max-width: 40rem;
+      text-align: center;
+      span {
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1rem;
+      }
     }
   }
   .content-warn {
