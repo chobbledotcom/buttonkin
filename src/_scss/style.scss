@@ -436,6 +436,11 @@ hr {
     a:hover {
       text-decoration: underline;
     }
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
   .content-reviews {
     margin-top: 2em;
