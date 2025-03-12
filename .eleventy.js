@@ -60,6 +60,19 @@ module.exports = function (eleventyConfig) {
 		return new Date(date).toUTCString();
 	});
 
+	const EXCLUDED_TAGS = ["post", "adventure", "game"];
+	eleventyConfig.addFilter("tags", (tags) => {
+		let result = [];
+		tags.forEach((tag) => {
+			if (!EXCLUDED_TAGS.includes(tag))
+				result.push({
+					tag: tag,
+					name: tag.replace(/-/, " "),
+				});
+		});
+		return result;
+	});
+
 	return {
 		dir: {
 			input: "src",
