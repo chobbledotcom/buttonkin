@@ -48,5 +48,5 @@ metaTitle: September 2022 newsletter from Button Kin Games
 <p>
     I am decidedly NOT a cartographer (as we have seen in previous months) but sometimes when you need something specific, a functional map will do better than a gorgeous one. I made this early in on my current D&D campaign. It’s my take on an opulent Riad compound for a rich, desert-dwelling tea merchant. Something fey has taken over the master bedroom, and it’s up to our heroes to vanquish it and whatever else you think might be hiding here. For us it was three pixies driving a suit of armour and some very deadly butterflies.
 </p>
-<a href="/assets/images/newsletter/bothwick_riad_ground.png" target="_blank"><img src="https://buttonkin.com/assets/images/newsletter/bothwick_riad_ground.png" style="width: 300px; margin: 0 auto 10px auto;" alt="bothwick riad lower floor"/></a>
-<a href="/assets/images/newsletter/bothwick_riad_upper.png" target="_blank"><img src="https://buttonkin.com/assets/images/newsletter/bothwick_riad_upper.png" style="width: 300px; margin: auto;" alt="bothwick riad upper floor"/></a>
+<a href="/assets/images/newsletter/bothwick_riad_ground.png" target="_blank"><img src="/assets/images/newsletter/bothwick_riad_ground.png" style="width: 300px; margin: 0 auto 10px auto;" alt="bothwick riad lower floor"/></a>
+<a href="/assets/images/newsletter/bothwick_riad_upper.png" target="_blank"><img src="/assets/images/newsletter/bothwick_riad_upper.png" style="width: 300px; margin: auto;" alt="bothwick riad upper floor"/></a>
