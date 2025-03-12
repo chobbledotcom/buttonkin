@@ -5,12 +5,12 @@
     src="/assets/logo_transparent_bg.png"
   />
   {% include "social-media-links.html" %}
-  <div class="bloglinks" style="margin: 20px auto 0 auto; width: 50%">
+  <div class="blog-links">
     <h5>Latest blogs</h5>
-    <ol style="list-style: none; padding: 0">
+    <ul>
       {% for p in collections.post %}
         {% if forloop.index < 4 %}
-          <li style="margin-top: 20px">
+          <li>
             <a href="{{ p.url | escape }}">
               {{ p.data.title | escape }}<br />
               <small>{{ p.data.subtitle | escape | truncate: 35 }}</small>
@@ -18,9 +18,9 @@
           </li>
         {% endif %}
       {% endfor %}
-      <li style="margin-top: 20px">
+      <li>
         <a href="/newsletter/">More Posts &rarr;</a>
       </li>
-    </ol>
+    </ul>
   </div>
 </div>

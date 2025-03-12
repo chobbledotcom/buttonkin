@@ -1,8 +1,10 @@
-<a href="/">
-	<div class="">
-		<img alt="A banner with lots of dice and the words 'Button Kin Games'" srcset="/assets/banner-500.png 500w, /assets/banner-680.png 680w, /assets/banner-920.png 920w, /assets/banner-1800.png 1800w" sizes="100vw" />
-	</div>
-</a>
+<div class="banner-container">
+	<a href="/">
+		<div class="banner-image">
+			<img alt="A banner with lots of dice and the words 'Button Kin Games'" srcset="/assets/banner-500.png 500w, /assets/banner-680.png 680w, /assets/banner-920.png 920w, /assets/banner-1800.png 1800w" sizes="100vw" />
+		</div>
+	</a>
+</div>
 <nav class="navbar">
 	<div class="container">
 		<a class="navbar-brand" href="/">
@@ -13,21 +15,34 @@
 		</a>
 		<div class="navbar__links align--right">
 			{% assign pages_list = collections.page | sort: 'data.order' %} 
-			{% for page in pages_list %}
-  			{% if page.data.linkText %}
+			{% for p in pages_list %}
+  			{% if p.data.linkText %}
   			<a
-          class="navbar__link"
-          href="{{ page.url }}"
+          class="
+					  navbar__link
+						{% if p.url == page.url %}
+							active
+						{% endif %}
+					"
+          href="{{ p.url }}"
         >
   				<i
-            class="icon-{{ page.data.icon | escape }}"
+            class="icon-{{ p.data.icon | escape }}"
           ></i>
-          {{ page.data.linkText | escape }}
+          {{ p.data.linkText | escape }}
   			</a>
   			{% endif %} 
 			{% endfor %}
 			{% assign latest_blog = collections.post | reverse | first %}
-			<a class="navbar__link" href="{{ latest_blog.url }}">
+			<a
+			  class="
+					navbar__link
+					{% if latest_blog.url == page.url %}
+						active
+					{% endif %}
+				"
+				href="{{ latest_blog.url }}"
+			>
 				<i class="icon-newspaper"></i> Blog
 			</a>
 			<a class="navbar__link" href="https://buttonkingames.bigcartel.com">

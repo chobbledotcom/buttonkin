@@ -13,5 +13,5 @@ permalink: "/"
     Go ahead and check out the <a href="/about">About</a> section if you'd like to know more about Yvris, or the <a href="/blog">blog</a> to catch up on recent happenings. If you'd like to stay in the know about what's coming up for Button Kin, you can sign up to the Button Kin Times, her monthly newsletter:
 </p>
 <div>
-    <iframe scrolling="no" style="width:100%!important;height:150px;border:0px !important" src="https://buttondown.email/button_kin_games?as_embed=true"></iframe>
+    {% include "subscribe.html" %}
 </div>
