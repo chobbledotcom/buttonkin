@@ -20,15 +20,17 @@ layout: page.html
   <p class="content-suitability">Suitable for {{suitability | escape}}.</p>
 
   {% if itch_widget %}
-   <iframe
-     frameborder="0"
-     src="{{itch_widget.src}}"
-     class="itch-widget"
-    >
-      <a href="{{itch_widget.url}}">
-        {{title | escape}}
-      </a>
-    </iframe>
+   <div class="iframe-container">
+     <iframe
+       frameborder="0"
+       src="{{itch_widget.src}}?border_color=white"
+       class="itch-widget embedded-iframe"
+      >
+        <a href="{{itch_widget.url}}">
+          {{title | escape}}
+        </a>
+      </iframe>
+   </div>
   {% endif %}  {{ content }} {% if reviews %}
   <div class="content-reviews">
     <h5>Kind words about <i>{{title | escape}}</i></h5>

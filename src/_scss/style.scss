@@ -257,10 +257,25 @@ a {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 main {
   padding: 30px 0 50px;
   line-height: 1.8;
   color: $text;
+  
+  .main-content {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
   
   .container {
     padding: 30px;
@@ -439,11 +454,6 @@ hr {
     margin-top: 1em;
     font-weight: 600;
   }
-  .itch-widget {
-    width: 100%;
-    margin: 1rem 0 2rem;
-    height: 167px;
-  }
   .banner {
     border-left: 4px solid $highlight;
     border-radius: 8px;
@@ -531,23 +541,61 @@ hr {
   }
 }
 
-.subscribe-container {
-  background-color: white;
-  padding: 0;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  margin: 30px 0;
+@keyframes fadeInIframe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  margin: 3rem auto;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid $highlight;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0.7;
+  }
 
   iframe {
     display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    opacity: 0;
+    animation: fadeInIframe 1s ease-in forwards;
+    animation-delay: 0.3s;
+    position: relative;
+    z-index: 2;
     border: none;
-    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+
+    &.itch-widget {
+      height: 167px;
+    }
+    &.subscribe {
+      height: 150px;
+      max-width: 300px;
+    }
   }
 }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 .social-links {
   list-style-type: none;
