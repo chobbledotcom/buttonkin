@@ -443,17 +443,20 @@ hr {
     }
   }
   .content-reviews {
-    margin-top: 2em;
+    margin-top: 3em;
     blockquote {
       font-size: 1.2rem;
-      margin: 2rem auto;
+      margin: 3rem auto;
       max-width: 40rem;
       text-align: center;
+      font-style: italic;
+      
       span {
         display: block;
         text-align: right;
         font-weight: bold;
         font-size: 1rem;
+        font-style: normal;
       }
     }
   }
