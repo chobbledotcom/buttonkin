@@ -2,7 +2,7 @@
 layout: adventures.html
 cssClass: page--adventures
 linkText: Adventures
-order: 4
+order: 3
 metaTitle: "Adventures for popular TTRPGs and role-playing systems"
 icon: fire
 title: "Adventures"

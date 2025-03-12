@@ -14,7 +14,7 @@
 			</div>
 		</a>
 		<div class="navbar__links align--right">
-			{% assign pages_list = collections.page | sort: 'data.order' %} 
+			{% assign pages_list = collections.page | where: 'data.order' | sort: 'data.order' %} 
 			{% for p in pages_list %}
   			{% if p.data.linkText %}
   			<a
