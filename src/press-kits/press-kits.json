@@ -1,0 +1,4 @@
+{
+  "tags": "press-kit",
+  "permalink": "/{{ page.fileSlug }}-press-kit/"
+}

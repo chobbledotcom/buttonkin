@@ -63,6 +63,7 @@
         scripts = [
           "build"
           "serve"
+          "dryrun"
         ];
 
         scriptPackages = builtins.listToAttrs (
@@ -81,7 +82,7 @@
         devShells = rec {
           default = dev;
           dev = pkgs.mkShell {
-            buildInputs = commonBuildInputs ++ (builtins.attrValues packages);
+            buildInputs = commonBuildInputs ++ (map (name: mkPackage name) scripts);
             shellHook = ''
               rm -rf node_modules
               rm -rf package.json
@@ -90,6 +91,7 @@
               echo "Development environment ready!"
               echo "Run 'serve' to start development server"
               echo "Run 'build' to build the site in the _site directory"
+              echo "Run 'dryrun' to do a dry run"
             '';
           };
         };

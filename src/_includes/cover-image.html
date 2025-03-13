@@ -1,0 +1,17 @@
+{% assign page_dir = page.inputPath | split: '/' | pop | join: '/' %}
+
+{% assign cover_png_path = page_dir | append: '/cover.png' | replace: './src', '' %}
+{% assign cover_jpg_path = page_dir | append: '/cover.jpg' | replace: './src', '' %}
+
+<img
+  sizes="50vw"
+  alt=""
+  class="cover-image"
+  {% if cover_png_path | file_exists %}
+    src="{{ cover_png_path }}"
+  {% elsif cover_jpg_path | file_exists %}
+    src="{{ cover_jpg_path }}"
+  {% else %}
+    src="/assets/dice-corner.png"
+  {% endif %}
+/>
