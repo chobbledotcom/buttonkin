@@ -1,6 +1,6 @@
 {
-  description = "noktorum-com";
   inputs = {
+    nixpkgs.url = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs =
@@ -25,7 +25,7 @@
         ];
 
         site = pkgs.stdenv.mkDerivation {
-          name = "eleventy-site";
+          name = "buttonkin-com";
           src = ./.;
           buildInputs = commonBuildInputs ++ [ nodeModules ];
 
