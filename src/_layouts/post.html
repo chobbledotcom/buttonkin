@@ -30,9 +30,9 @@ layout: page.html
   </p>
 </div>
 {% include "subscribe.html" %}
-<p class="text-center">
-  <a href="/newsletter/">More Posts &rarr;</a>
-</p>
+<div class="cta-buttons">
+  {% render "cta-button.html", url: "/newsletter/", text: "View all posts" %}
+</div>
 <hr />
 
 <h3>Other ways to keep up with Button Kin:</h3>

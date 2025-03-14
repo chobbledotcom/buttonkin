@@ -126,7 +126,8 @@ h1,
 h2,
 h3,
 h4,
-.navbar-brand {
+.navbar-brand,
+.btn-primary {
   font-family: "Calistoga", display;
   font-weight: 400;
 }
@@ -395,10 +396,12 @@ hr {
       color: white;
       border: none;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      transform-origin: center;
 
       &:hover {
         background-color: darken($dark-pink, 10%);
-        transform: translateY(-2px);
+        transform: scale(1.05) rotate(2deg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
     }
@@ -438,22 +441,17 @@ hr {
       border-bottom: 1px solid #f0f0f0;
       padding-bottom: 2rem;
       position: relative;
-      transition: transform 0.2s ease;
-      
+
       &.grid-layout {
         display: grid;
         grid-template-columns: 200px 1fr;
         gap: 1.5rem;
         align-items: start;
-        
+
         @media (max-width: 767px) {
           grid-template-columns: 1fr;
           gap: 1rem;
         }
-      }
-
-      &:hover {
-        transform: translateY(-3px);
       }
 
       &:last-child {
@@ -474,7 +472,7 @@ hr {
       display: block;
       margin-bottom: 0.5rem;
     }
-    
+
     .blog-list li {
       display: block;
     }
@@ -494,13 +492,28 @@ hr {
     }
   }
 
+  .grid-layout a {
+    position: relative;
+    display: block;
+
+    &:hover {
+      img.content-thumb {
+        transform: scale(1.08) rotate(-2deg);
+      }
+    }
+  }
+
   img.content-thumb {
     width: 100%;
     height: auto;
+    margin: 0;
     aspect-ratio: 4/3;
     border-radius: 6px;
+    border: none;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-origin: center;
   }
   .content-reviews {
     margin-top: 3em;
