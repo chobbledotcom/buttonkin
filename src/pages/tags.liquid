@@ -12,8 +12,8 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: page.html
 eleventyComputed:
-  title: "Tagged \"{{ tag | replace: '-', ' ' }}\""
-  metaTitle: "Tagged \"{{ tag | replace: '-', ' ' }}\""
+  title: "Posts Tagged \"{{ tag | replace: '-', ' ' }}\""
+  metaTitle: "Posts Tagged \"{{ tag | replace: '-', ' ' }}\""
 ---
 
 {%- assign taglist = collections[tag] -%}

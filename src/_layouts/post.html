@@ -13,15 +13,18 @@ layout: page.html
         %} {{ page.date | date: date_format }}
       </em>
     </p>
-    {% assign show_tags = tags | tags %} {% if show_tags %}
-    <p>
-      <strong>Tagged:</strong>
-      <em>
-        {% for tag in show_tags -%}{%- if forloop.first == false %}, {% endif %}
-        <a href="/tags/{{ tag.tag }}">{{ tag.name }}</a>{% endfor %}
-      </em>
-    </p>
-    {% endif %} {{ content }}
+    {% assign show_tags = tags | tags %}
+    {% if show_tags %}
+      <p>
+        <strong>Tagged:</strong>
+        <em>
+          {% for tag in show_tags -%}{%- if forloop.first == false %}, {% endif %}
+          <a href="/tags/{{ tag.tag }}">{{ tag.name }}</a>{% endfor %}
+        </em>
+      </p>
+    {% endif %}
+    
+    {{ content }}
   </div>
   <p>
     Thanks for reading! If you want to hear from us monthly you can subscribe to

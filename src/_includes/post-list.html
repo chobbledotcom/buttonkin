@@ -7,6 +7,16 @@
       <a class="post-link" href="{{ post.url }}">{{ post.data.title | escape }}</a>
     </h5>
     <p>{{ post.data.subtitle | escape }}</p>
+    {% assign show_tags = post.data.tags | tags %}
+    {% if show_tags %}
+      <p>
+        <em>
+          {% for tag in show_tags -%}
+            {%- if forloop.first == false %}, {% endif %}
+          <a href="/tags/{{ tag.tag }}">{{ tag.name }}</a>{% endfor %}
+        </em>
+      </p>
+    {% endif %}
   </li>
   {%- endfor -%}
 </ul>
