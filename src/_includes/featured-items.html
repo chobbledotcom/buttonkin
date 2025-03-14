@@ -8,11 +8,13 @@
       {%- if game.data.featured -%}
         {%- assign featured_count = featured_count | plus: 1 -%}
         <li class="grid-layout">
-          <img
-            class="content-thumb"
-            src="/games/{{ game.fileSlug }}/thumb.png"
-            alt="{{ game.data.title | escape }}"
-          />
+          <a href="{{ game.url }}">
+            <img
+              class="content-thumb"
+              src="/games/{{ game.fileSlug }}/thumb.png"
+              alt="{{ game.data.title | escape }}"
+            />
+          </a>
           <div class="content-text">
             <a class="content-link" href="{{ game.url }}">
               <h4>{{ game.data.title | escape }}</h4>
@@ -30,11 +32,13 @@
       {%- if adventure.data.featured -%}
         {%- assign featured_count = featured_count | plus: 1 -%}
         <li class="grid-layout">
-          <img
-            class="content-thumb"
-            src="/adventures/{{ adventure.fileSlug }}/thumb.png"
-            alt="{{ adventure.data.title | escape }}"
-          />
+          <a href="{{ adventure.url }}">
+            <img
+              class="content-thumb"
+              src="/adventures/{{ adventure.fileSlug }}/thumb.png"
+              alt="{{ adventure.data.title | escape }}"
+            />
+          </a>
           <div class="content-text">
             <a class="content-link" href="{{ adventure.url }}">
               <h4>

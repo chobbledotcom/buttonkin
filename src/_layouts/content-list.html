@@ -18,11 +18,13 @@ eleventyComputed:
         {% assign content_items = collections[collection_name] | sort: 'data.order' %}
         {% for item in content_items %}
         <li class="grid-layout">
-          <img
-            class="content-thumb"
-            src="/{{ content_type }}/{{ item.fileSlug }}/thumb.png"
-            alt="{{ item.data.title | escape }}"
-          />
+          <a href="{{ item.url }}">
+            <img
+              class="content-thumb"
+              src="/{{ content_type }}/{{ item.fileSlug }}/thumb.png"
+              alt="{{ item.data.title | escape }}"
+            />
+          </a>
           <div class="content-text">
             <a class="content-link" href="{{ item.url }}">
               <h4>
