@@ -11,16 +11,17 @@ pagination:
     - game
 permalink: /tags/{{ tag }}/
 layout: page.html
+eleventyComputed:
+  title: "Tagged \"{{ tag | replace: '-', ' ' }}\""
+  metaTitle: "Tagged \"{{ tag | replace: '-', ' ' }}\""
 ---
 
-<h1>Tagged “{{ tag | replace: "-", " " }}”</h1>
-
-{% assign taglist = collections[tag] %}
-{% for post in taglist | reverse %}
-  {% if forloop.first == false %}
+{%- assign taglist = collections[tag] -%}
+{%- for post in taglist | reverse -%}
+  {%- if forloop.first == false -%}
     <hr>
-  {% endif %}
-  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+  {%- endif -%}
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   <h2>
     {{ page.date | date: date_format }}:
     <a href="{{ post.url }}">
@@ -30,4 +31,4 @@ layout: page.html
   <p>
     {{ post.data.subtitle }}
   </p>
-{% endfor %}
+{%- endfor -%}
