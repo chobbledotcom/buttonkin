@@ -670,6 +670,13 @@ hr {
   }
 }
 
+.post {
+  .post-date {
+    text-align: center;
+    margin-top: -2rem;
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
