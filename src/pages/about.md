@@ -13,7 +13,7 @@ Button Kin Games is a small independent TTRPG publisher based in Manchester, UK.
 
 ![Yvris Burke at a TTRPG convention](/assets/images/alex.jpg)
 
-Having run her first game just before the dawn of the pandemic era, Yvris (pronounced Eve-ris) suddenly found herself with a lot of time to immerse herself in different systems and roleplaying experiences, developing a borderline obsession. No more than 6 months later she decided to start making her own games. Friends of Yvris will recognise this charming combination of hubris a masochism as quite typical.
+Having run her first game just before the dawn of the pandemic era, Yvris (pronounced Eve-ris) suddenly found herself with a lot of time to immerse herself in different systems and roleplaying experiences, developing a borderline obsession. No more than 6 months later she decided to start making her own games. Friends of Yvris will recognise this charming combination of hubris and masochism as quite typical.
 
 Drawing on a life long love of sci fi, fantasy, whimsy, and wry humour, Yvris is best known for her solo TTRPG about being a baby bumble bee, [_Bumbling_](/bumbling/), her reality TV TTRPG about sassy, cutthroat llamas [_Drama Llamas_](/drama-llamas/), and her [_work_](https://www.youtube.com/watch?v=h9JJWbzp1YI) [_streaming_](https://www.youtube.com/watch?v=WNjlJOIvbAI) with [_Girls Run These Worlds_](https://www.twitch.tv/girlsruntheseworlds).
 
