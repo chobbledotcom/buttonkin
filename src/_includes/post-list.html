@@ -1,20 +1,22 @@
 <ul class="content-list">
   {%- for post in posts limit: limit -%}
   <li>
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h5>
-      <a class="post-link" href="{{ post.url }}"
-        >{{ post.data.title | escape }}</a
-      >
-      <br /><small>{{ post.data.subtitle | escape }}</small>
-    </h5>
+    <div class="post-date-container">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+    </div>
+    <div class="content-text">
+      <h5>
+        <a class="post-link" href="{{ post.url }}">{{ post.data.title | escape }}</a>
+      </h5>
+      <p>{{ post.data.subtitle | escape }}</p>
+    </div>
   </li>
   {%- endfor -%}
 </ul>
 
 {%- if show_all_link -%}
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="/newsletter/" class="btn btn-primary">View all posts</a>
+<div class="cta-buttons">
+  {% render "cta-button.html", url: "/newsletter/", text: "View all posts" %}
 </div>
 {%- endif -%}

@@ -1,38 +1,7 @@
 ---
-layout: default.html
+layout: content-list.html
+collection_name: game
+content_type: games
+banner_include: "banner.md"
 ---
-
-<div class="row">
-  <div class="col-md-9 margin--bottom main-content">
-    {% include "title.html" %}
-    <div class="page {{ cssClass }}">
-      {% include "banner.md" %}
-      <ul class="content-list">
-        {% assign games_list = collections.game | sort: 'data.order' %} {% for
-        game in games_list %}
-        <li>
-          <a class="content-link" href="{{ game.url }}">
-            <img
-              class="content-thumb"
-              src="/games/{{ game.fileSlug }}/thumb.png"
-              alt=""
-            />
-            <h4>{{ game.data.title | escape }}</h4>
-          </a>
-          <p>{{ game.data.subtitle | escape }}</p>
-          {% if game.data.external %}
-          <p class="content-available">
-            Available on {% for ext in game.data.external %} {% if forloop.last
-            == true and forloop.length > 1 %}and {% endif %}
-            <a href="{{ ext.url }}" target="_blank">{{ext.name | escape}}</a>{%
-            if forloop.last != true and forloop.length > 2 %}, {% endif %} {%
-            endfor %}
-          </p>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% include "side-menu.html" %}
-</div>
+{{ content }}

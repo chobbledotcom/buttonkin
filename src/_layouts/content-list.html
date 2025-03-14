@@ -1,0 +1,46 @@
+---
+layout: default.html
+eleventyComputed:
+  title: "{{ title | default: page.title }}"
+  subtitle: "{{ subtitle | default: page.subtitle }}"
+  icon: "{{ icon | default: page.icon }}"
+  cssClass: "{{ cssClass | default: page.cssClass }}"
+---
+
+<div class="row">
+  <div class="col-md-9 margin--bottom main-content">
+    {% render "title.html", title: title, subtitle: subtitle, icon: icon %}
+    <div class="page {{ cssClass }}">
+      {% if banner_include %}
+        {% render banner_include %}
+      {% endif %}
+      <ul class="content-list">
+        {% assign content_items = collections[collection_name] | sort: 'data.order' %}
+        {% for item in content_items %}
+        <li>
+          <img
+            class="content-thumb"
+            src="/{{ content_type }}/{{ item.fileSlug }}/thumb.png"
+            alt="{{ item.data.title | escape }}"
+          />
+          <div class="content-text">
+            <a class="content-link" href="{{ item.url }}">
+              <h4>
+                {{ item.data.title | escape }} 
+                {% if item.data.system %}
+                  ({{ item.data.system | escape }})
+                {% endif %}
+              </h4>
+            </a>
+            <p>{{ item.data.subtitle | escape }}</p>
+            {% if item.data.external %}
+            {% render "external-links.html", external: item.data.external %}
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% render "side-menu.html" %}
+</div>

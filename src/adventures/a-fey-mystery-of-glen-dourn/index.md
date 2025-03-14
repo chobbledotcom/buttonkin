@@ -10,7 +10,7 @@ featured: true
 external:
   [
     {
-      name: "DMsGuild",
+      name: "DM's Guild",
       url: "https://www.dmsguild.com/product/345735/A-Fey-Mystery-of-Glen-Dourn",
     },
   ]

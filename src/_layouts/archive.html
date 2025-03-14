@@ -9,7 +9,7 @@ layout: default.html
       {%- assign posts = collections.post | reverse -%}
       {%- assign limit = 9999 -%}
       {%- assign show_all_link = false -%}
-      {%- include "post-list.html" -%}
+      {% include "post-list.html" %}
     </div>
     <div style="width: 60%; margin: auto">
       {% include "subscribe.html" %}

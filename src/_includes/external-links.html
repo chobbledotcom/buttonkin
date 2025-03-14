@@ -1,0 +1,7 @@
+{% if external.length > 0 %}
+  <div class="external-links">
+    {%- for ext in external -%}
+      {% render "cta-button.html", url: ext.url, text: ext.name, external: true %}
+    {%- endfor -%}
+  </div>
+{% endif %}

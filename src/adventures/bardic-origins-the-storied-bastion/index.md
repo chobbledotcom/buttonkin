@@ -8,7 +8,7 @@ suitability: 3-6 players at level 5-9. Around 3-4 hours of play
 external:
   [
     {
-      name: "DMsGuild",
+      name: "DM's Guild",
       url: "https://www.dmsguild.com/product/387241/The-Storied-Bastion",
     },
   ]

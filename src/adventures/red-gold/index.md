@@ -9,7 +9,7 @@ suitability: 3-6 players at level 1-3. Around 4-6 hours of play
 external:
   [
     {
-      name: "DMsGuild",
+      name: "DM's Guild",
       url: "https://www.dmsguild.com/product/338797/Red-Gold",
     },
   ]

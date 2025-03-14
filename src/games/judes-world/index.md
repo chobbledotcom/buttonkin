@@ -3,7 +3,7 @@ order: 1
 title: Jude's World
 subtitle: A plucky preteen struggles to reunite their separating parents
 metaTitle: A coming of age TTRPG about love in all its forms
-suitability: a single player aged 15 and up.
+suitability: a single player aged 15 and up
 featured: true
 external: [{ name: "Itch.io", url: "https://buttonkin.itch.io/judes-world" }]
 itch_widget:

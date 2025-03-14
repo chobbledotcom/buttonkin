@@ -7,7 +7,7 @@ permalink: "/"
 
 {%- # include banner.md -%}
 
-# Button Kin Games
+<h1>Button Kin Games</h1>
 
 Established in 2020 by game designer, writer, and web developer, Yvris Burke, Button Kin Games is home to whimsical and strange <a href="/games/">TTRPGs with unusual themes</a>, and a smattering of <a href="/adventures/">D&D 5e content</a>.
 
@@ -19,12 +19,12 @@ Go ahead and check out the <a href="/about/">About</a> section if you'd like to 
 
 {%- include "featured-items.html" -%}
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="/games/" class="btn btn-primary">View all games</a>
-  <a href="/adventures/" class="btn btn-primary" style="margin-left: 10px;">View all adventures</a>
+<div class="cta-buttons">
+  {% render "cta-button.html", url: "/games/", text: "View all games" %}
+  {% render "cta-button.html", url: "/adventures/", text: "View all adventures" %}
 </div>
 
-## Latest Posts
+<h2>Latest Posts</h2>
 
 {% assign posts = collections.post | reverse -%}
 {%- assign limit = 2 -%}

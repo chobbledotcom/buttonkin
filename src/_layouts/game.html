@@ -3,19 +3,20 @@ layout: page.html
 ---
 
 <div class="content" itemprop="articleBody">
+  {% if external %}
+  <div class="content-available">
+    <h6>Get your copy:</h6>
+    {% render "external-links.html", external: external %}
+  </div>
+  {% endif %}
 
   {% if system %}
   <h6>System: {{system | escape}}</h6>
-  {% endif %} {% if contentwarn %}
+  {% endif %} 
+  
+  {% if contentwarn %}
   <p class="content-warn">Content warnings: {{contentwarn | escape}}</p>
-  {% endif %} {% if external %}
-  <p class="content-available">
-    Available on {% for ext in external %} {% if forloop.last == true and
-    forloop.length > 1 %}and {% endif %}
-    <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
-    forloop.last != true and forloop.length > 2 %}, {% endif %} {% endfor %}
-  </p>
-  {% endif %}
+  {% endif %} 
 
   <p class="content-suitability">Suitable for {{suitability | escape}}.</p>
 
@@ -35,7 +36,11 @@ layout: page.html
         </a>
       </iframe>
    </div>
-  {% endif %}  {{ content }} {% if reviews %}
+  {% endif %}  
+  
+  {{ content }} 
+  
+  {% if reviews %}
   <div class="content-reviews">
     <h5>Kind words about <i>{{title | escape}}</i></h5>
     {% for review in reviews %}
@@ -46,12 +51,11 @@ layout: page.html
     {% endfor %}
   </div>
   {% endif %}
+  
   {% if external %}
-  <p class="content-available" style="float: right; bottom: 50px">
-    Available on {% for ext in external %} {% if forloop.last == true and
-    forloop.length > 1 %}and {% endif %}
-    <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{% if
-    forloop.last != true and forloop.length > 2 %}, {% endif %} {% endfor %}
-  </p>
+  <div class="content-available">
+    <h6>Get your copy:</h6>
+    {% render "external-links.html", external: external %}
+  </div>
   {% endif %}
 </div>
