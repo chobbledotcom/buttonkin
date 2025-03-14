@@ -2,62 +2,21 @@
   <ul class="content-list">
     {%- assign games_list = collections.game | sort: 'data.order' -%}
     {%- assign adventures_list = collections.adventure | sort: 'data.order' -%}
-    {%- assign featured_count = 0 -%}
     
     {%- for game in games_list -%}
       {%- if game.data.featured -%}
-        {%- assign featured_count = featured_count | plus: 1 -%}
-        <li class="grid-layout">
-          <a href="{{ game.url }}">
-            <img
-              class="content-thumb"
-              src="/games/{{ game.fileSlug }}/thumb.png"
-              alt="{{ game.data.title | escape }}"
-            />
-          </a>
-          <div class="content-text">
-            <a class="content-link" href="{{ game.url }}">
-              <h4>{{ game.data.title | escape }}</h4>
-            </a>
-            <p>{{ game.data.subtitle | escape }}</p>
-            {%- if game.data.external -%}
-            {% render "external-links.html", external: game.data.external %}
-            {%- endif -%}
-          </div>
-        </li>
+        {%- assign item = game -%}
+        {%- assign source_path = "games" -%}
+        {% render "content-item.html", item: item, source_path: source_path %}
       {%- endif -%}
     {%- endfor -%}
     
     {%- for adventure in adventures_list -%}
       {%- if adventure.data.featured -%}
-        {%- assign featured_count = featured_count | plus: 1 -%}
-        <li class="grid-layout">
-          <a href="{{ adventure.url }}">
-            <img
-              class="content-thumb"
-              src="/adventures/{{ adventure.fileSlug }}/thumb.png"
-              alt="{{ adventure.data.title | escape }}"
-            />
-          </a>
-          <div class="content-text">
-            <a class="content-link" href="{{ adventure.url }}">
-              <h4>
-                {{ adventure.data.title | escape }} {%- if adventure.data.system -%}({{ adventure.data.system | escape }}){%- endif -%}
-              </h4>
-            </a>
-            <p>{{ adventure.data.subtitle | escape }}</p>
-            {%- if adventure.data.external -%}
-            {% render "external-links.html", external: adventure.data.external %}
-            {%- endif -%}
-          </div>
-        </li>
+        {%- assign item = adventure -%}
+        {%- assign source_path = "adventures" -%}
+        {% render "content-item.html", item: item, source_path: source_path %}
       {%- endif -%}
     {%- endfor -%}
   </ul>
 </div>
-
-{%- unless featured_count > 0 -%}
-<p class="text-muted text-center">
-  <em>No featured items currently available.</em>
-</p>
-{%- endunless -%}

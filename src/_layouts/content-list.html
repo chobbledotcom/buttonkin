@@ -17,29 +17,8 @@ eleventyComputed:
       <ul class="content-list">
         {% assign content_items = collections[collection_name] | sort: 'data.order' %}
         {% for item in content_items %}
-        <li class="grid-layout">
-          <a href="{{ item.url }}">
-            <img
-              class="content-thumb"
-              src="/{{ content_type }}/{{ item.fileSlug }}/thumb.png"
-              alt="{{ item.data.title | escape }}"
-            />
-          </a>
-          <div class="content-text">
-            <a class="content-link" href="{{ item.url }}">
-              <h4>
-                {{ item.data.title | escape }} 
-                {% if item.data.system %}
-                  ({{ item.data.system | escape }})
-                {% endif %}
-              </h4>
-            </a>
-            <p>{{ item.data.subtitle | escape }}</p>
-            {% if item.data.external %}
-            {% render "external-links.html", external: item.data.external %}
-            {% endif %}
-          </div>
-        </li>
+          {% assign source_path = content_type %}
+          {% render "content-item.html", item: item, source_path: source_path %}
         {% endfor %}
       </ul>
     </div>
