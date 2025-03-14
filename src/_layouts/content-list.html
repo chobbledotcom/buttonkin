@@ -1,5 +1,5 @@
 ---
-layout: default.html
+layout: page.html
 eleventyComputed:
   title: "{{ title | default: page.title }}"
   subtitle: "{{ subtitle | default: page.subtitle }}"
@@ -7,21 +7,14 @@ eleventyComputed:
   cssClass: "{{ cssClass | default: page.cssClass }}"
 ---
 
-<div class="row">
-  <div class="col-md-9 margin--bottom main-content">
-    {% render "title.html", title: title, subtitle: subtitle, icon: icon %}
-    <div class="page {{ cssClass }}">
-      {% if banner_include %}
-        {% render banner_include %}
-      {% endif %}
-      <ul class="content-list">
-        {% assign content_items = collections[collection_name] | sort: 'data.order' %}
-        {% for item in content_items %}
-          {% assign source_path = content_type %}
-          {% render "content-item.html", item: item, source_path: source_path %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% render "side-menu.html" %}
-</div>
+{% if banner_include %}
+  {% include banner_include %}
+{% endif %}
+
+<ul class="content-list">
+  {% assign content_items = collections[collection_name] | sort: 'data.order' %}
+  {% for item in content_items %}
+    {% assign source_path = content_type %}
+    {% render "content-item.html", item: item, source_path: source_path %}
+  {% endfor %}
+</ul>

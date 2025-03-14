@@ -14,7 +14,7 @@
           <li>
             <a href="{{ p.url | escape }}">
               {{ p.data.title | escape }}<br />
-              <small>{{ p.data.subtitle | escape | truncate: 35 }}</small>
+              <small>{{ p.data.subtitle | escape }}</small>
             </a>
           </li>
         {% endif %}

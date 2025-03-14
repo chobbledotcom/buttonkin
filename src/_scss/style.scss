@@ -305,6 +305,7 @@ main {
   padding: 2rem 0.75rem;
   line-height: 1.8;
   color: $text;
+  position: relative;
 
   .main-content {
     animation: fadeIn 0.8s ease-out forwards;
@@ -799,6 +800,20 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+.footer-button {
+  display: none;
+  @media (min-width: 1000px) {
+    display: block;
+    position: absolute;
+    bottom: -150px;
+    right: -48px;
+    z-index: 0;
+    width: 240px;
+    height: auto;
+    transform: scale(-1, 1);
   }
 }
 
