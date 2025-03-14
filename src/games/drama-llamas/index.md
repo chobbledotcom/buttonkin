@@ -4,6 +4,7 @@ title: Drama Llamas
 subtitle: A TTRPG about reality TV competitions and the fame-hungry llamas who compete in them
 metaTitle: A chaotic, comedic TTRPG about llamas on reality TV
 suitability: 3-6 players of all ages and a GM
+featured: true
 external:
   [
     { name: "Itch.io", url: "https://buttonkin.itch.io/drama-llamas" },

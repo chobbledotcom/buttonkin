@@ -5,7 +5,7 @@ metaTitle: "Button Kin Games"
 permalink: "/"
 ---
 
-{% # include banner.md %}
+{%- # include banner.md -%}
 
 # Button Kin Games
 
@@ -13,4 +13,20 @@ Established in 2020 by game designer, writer, and web developer, Yvris Burke, Bu
 
 Go ahead and check out the <a href="/about/">About</a> section if you'd like to know more about Yvris, or the <a href="/newsletter/">blog</a> to catch up on recent happenings. If you'd like to stay in the know about what's coming up for Button Kin, you can sign up to the Button Kin Times, her monthly newsletter:
 
-{% include "subscribe.html" %}
+{%- include "subscribe.html" -%}
+
+<h2>Featured Releases</h2>
+
+{%- include "featured-items.html" -%}
+
+<div style="text-align: center; margin: 2rem 0;">
+  <a href="/games/" class="btn btn-primary">View all games</a>
+  <a href="/adventures/" class="btn btn-primary" style="margin-left: 10px;">View all adventures</a>
+</div>
+
+## Latest Posts
+
+{% assign posts = collections.post | reverse -%}
+{%- assign limit = 2 -%}
+{%- assign show_all_link = true -%}
+{% include "post-list.html" %}

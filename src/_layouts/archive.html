@@ -6,21 +6,10 @@ layout: default.html
   <div class="col-md-9 margin--bottom main-content">
     {% include "title.html" %}
     <div class="page {{page.cssClass}}">
-      <ul class="content-list">
-        {% assign posts = collections.post | reverse %} {% for post in posts %}
-        <li>
-          {% assign date_format = site.minima.date_format | default: "%b %-d,
-          %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h5>
-            <a class="post-link" href="{{ post.url }}"
-              >{{ post.data.title | escape }}</a
-            >
-            <br /><small>{{ post.data.subtitle | escape }}</small>
-          </h5>
-        </li>
-        {% endfor %}
-      </ul>
+      {%- assign posts = collections.post | reverse -%}
+      {%- assign limit = 9999 -%}
+      {%- assign show_all_link = false -%}
+      {%- include "post-list.html" -%}
     </div>
     <div style="width: 60%; margin: auto">
       {% include "subscribe.html" %}

@@ -6,6 +6,7 @@ subtitle: Our best-selling fey haunted house mystery
 metaTitle: A best-selling D&D 5e adventure for 3-6 players level 7-9
 contentwarn: witches, ghosts, rats, body parts, death
 suitability: 3-6 players at level 7-9. Around 8-12 hours of play
+featured: true
 external:
   [
     {
