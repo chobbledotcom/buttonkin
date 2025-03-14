@@ -38,7 +38,7 @@ Drama Llamas is a narrative driven TTRPG about reality TV competitions. Easy to 
 
 Want to know how it plays? Why not watch a game?
 
-<iframe width="560" height="315" style="margin: 0 auto 0 auto;display:block;" src="https://www.youtube.com/embed/LsuIGM1oHMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% render "youtube.html" id: "LsuIGM1oHMw", title: "Drama Llamas TTRPG Gameplay" %}
 
 ---
 

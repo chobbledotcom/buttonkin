@@ -1,0 +1,43 @@
+{% assign videoId = id | split: '?' | first %}
+<div class="youtube-embed-container iframe-container">
+  <iframe
+    loading="lazy"
+    srcdoc="<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { padding: 0; margin: 0; overflow: hidden; }
+    html, body { height: 100%; }
+    img, span { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; }
+    span { height: 1.5em; text-align: center; font: 48px/1.5 sans-serif; color: white; text-shadow: 0 0 0.5em black; }
+    .play-button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <a class='play-button' href='https://www.youtube-nocookie.com/embed/{{ id }}?rel=0&modestbranding=1&autoplay=1'>
+    <img src='https://img.youtube.com/vi/{{ videoId }}/hqdefault.jpg'>
+    <span>▶</span>
+  </a>
+</body>
+</html>"
+    src="about:blank"
+    title="{{ title | default: 'YouTube video player' }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframes = document.querySelectorAll('.youtube-embed-container iframe');
+    iframes.forEach(iframe => {
+      iframe.addEventListener('click', function() {
+        const src = this.srcdoc.match(/href=([^>]+?)>/)[1];
+        this.setAttribute('src', src);
+        this.removeAttribute('srcdoc');
+      });
+    });
+  });
+</script>

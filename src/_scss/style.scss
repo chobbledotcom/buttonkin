@@ -132,10 +132,13 @@ h4,
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin: 1rem auto 3rem;
   position: relative;
   padding-bottom: 0.5rem;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
 
   &:after {
     content: "";
@@ -154,17 +157,18 @@ nav {
 }
 
 img {
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  display: block;
-
-  .about main &,
-  .game main & {
-    max-width: 70%;
+  .main-content & {
+    display: block;
+    width: 70%;
+    height: auto;
     margin: 0 auto 2rem;
     border: 2px solid #923a52;
     border-radius: 5px;
+  }
+  &.right-rail-logo {
+    width: 200px;
+    margin: 0 auto 2rem;
+    border: 0 !important;
   }
 }
 
@@ -219,12 +223,13 @@ a {
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
+    gap: 0.5rem;
   }
 
   &__link {
     font-size: 1.1rem;
-    margin-right: 1.5rem;
     padding: 0.5rem 0.8rem;
+    margin: 0;
     border-radius: 4px;
     position: relative;
 
@@ -243,7 +248,6 @@ a {
 
   /* shop link */
   &__link:last-of-type {
-    margin-right: 0;
     background-color: #b35b72;
     color: white;
     padding: 0.5rem 1rem;
@@ -397,12 +401,14 @@ hr {
     }
   }
   ul.content-list {
-    list-style: none;
+    display: flex;
     padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    gap: 2rem;
 
     li {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
       border-bottom: 1px solid #f0f0f0;
       position: relative;
       transition: transform 0.2s ease;
@@ -417,7 +423,6 @@ hr {
     }
 
     h5 {
-      margin-bottom: 0.7em;
       font-weight: 600;
       font-size: 1.3rem;
     }
@@ -425,7 +430,6 @@ hr {
     p {
       line-height: 1.5em;
       font-size: 0.9rem;
-      margin-bottom: 0.8em;
       color: #444;
     }
   }
@@ -434,7 +438,7 @@ hr {
     width: 150px;
     height: 120px;
     float: left;
-    margin-right: 20px;
+    margin: 0 1rem 1rem 0;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     object-fit: cover;
@@ -590,6 +594,7 @@ hr {
     border-radius: 50%;
     animation: spin 1s linear infinite;
     opacity: 0.7;
+    z-index: 1;
   }
 
   iframe {
@@ -612,6 +617,30 @@ hr {
       height: 150px;
       max-width: 40rem;
     }
+  }
+}
+
+// YouTube specific styling
+.youtube-embed-container {
+  width: 70%;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
   }
 }
 
@@ -656,11 +685,6 @@ hr {
     flex-direction: column;
     gap: 1rem;
   }
-}
-
-.right-rail-logo {
-  width: 200px;
-  margin-bottom: 10px;
 }
 
 footer {

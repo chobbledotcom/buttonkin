@@ -22,9 +22,13 @@ layout: page.html
   {% if itch_widget %}
    <div class="iframe-container">
      <iframe
+       loading="lazy"
        frameborder="0"
        src="{{itch_widget.src}}?border_color=white"
        class="itch-widget embedded-iframe"
+       referrerpolicy="strict-origin-when-cross-origin"
+       sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+       title="{{title | escape}} on itch.io"
       >
         <a href="{{itch_widget.url}}">
           {{title | escape}}

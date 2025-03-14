@@ -22,4 +22,4 @@ Steer your Jude through a complicated time in their young life and unleash your 
 
 A game, a love story, and a in a coming-of-age comedy-drama all in one, Jude's World pays homage to and critiques "Parent Trap"-style narratives as well as revelling in a 90s sitcom tone inspired by the likes of The Fresh Prince of Bel Air and Clarissa Explains it All.
 
-<iframe width="560" height="315" style="margin: 0 auto 0 auto;display:block;" src="https://www.youtube.com/embed/aagYwQLZjcY" title="Jude's World play through by Kat the Loremistress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% render "youtube.html", id: "aagYwQLZjcY", title: "Jude's World play through by Kat the Loremistress" %}
