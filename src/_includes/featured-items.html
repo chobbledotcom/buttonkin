@@ -1,57 +1,54 @@
 <div class="featured-items">
   <ul class="content-list">
-    {%- assign games_list = collections.game | sort: 'data.order' -%} {%- assign
-    adventures_list = collections.adventure | sort: 'data.order' -%} {%- assign
-    featured_count = 0 -%} {%- for game in games_list -%} {%- if
-    game.data.featured -%} {%- assign featured_count = featured_count | plus: 1
-    -%}
-    <li>
-      <a class="content-link" href="{{ game.url }}">
-        <img
-          class="content-thumb"
-          src="/games/{{ game.fileSlug }}/thumb.png"
-          alt=""
-        />
-        <h4>{{ game.data.title | escape }}</h4>
-      </a>
-      <p>{{ game.data.subtitle | escape }}</p>
-      {%- if game.data.external -%}
-      <p>
-        Available on {%- for ext in game.data.external -%} {%- if forloop.last
-        == true and forloop.length > 1 -%}and {%- endif -%}
-        <a href="{{ ext.url }}" target="_blank">{{ext.name | escape}}</a>{%- if
-        forloop.last != true and forloop.length > 2 -%}, {%- endif -%} {%-
-        endfor -%}
-      </p>
+    {%- assign games_list = collections.game | sort: 'data.order' -%}
+    {%- assign adventures_list = collections.adventure | sort: 'data.order' -%}
+    {%- assign featured_count = 0 -%}
+    
+    {%- for game in games_list -%}
+      {%- if game.data.featured -%}
+        {%- assign featured_count = featured_count | plus: 1 -%}
+        <li class="grid-layout">
+          <img
+            class="content-thumb"
+            src="/games/{{ game.fileSlug }}/thumb.png"
+            alt="{{ game.data.title | escape }}"
+          />
+          <div class="content-text">
+            <a class="content-link" href="{{ game.url }}">
+              <h4>{{ game.data.title | escape }}</h4>
+            </a>
+            <p>{{ game.data.subtitle | escape }}</p>
+            {%- if game.data.external -%}
+            {% render "external-links.html", external: game.data.external %}
+            {%- endif -%}
+          </div>
+        </li>
       {%- endif -%}
-    </li>
-    {%- endif -%} {%- endfor -%} {%- for adventure in adventures_list -%} {%- if
-    adventure.data.featured -%} {%- assign featured_count = featured_count |
-    plus: 1 -%}
-    <li>
-      <a class="content-link" href="{{ adventure.url }}">
-        <img
-          class="content-thumb"
-          src="/adventures/{{ adventure.fileSlug }}/thumb.png"
-          alt=""
-        />
-        <h4>
-          {{ adventure.data.title | escape }} {%- if adventure.data.system
-          -%}({{ adventure.data.system | escape }}){%- endif -%}
-        </h4>
-      </a>
-      <p>{{ adventure.data.subtitle | escape }}</p>
-      {%- if adventure.data.external -%}
-      <p class="content-available">
-        Available on {% for ext in adventure.data.external -%} {%- if
-        forloop.last == true and forloop.length > 1 -%}and {% endif -%}
-        <a href="{{ext.url}}" target="_blank">{{ext.name | escape}}</a>{%- if
-        forloop.last != true and forloop.length > 2 -%}, {%- endif -%} {%-
-        endfor -%}
-      </p>
+    {%- endfor -%}
+    
+    {%- for adventure in adventures_list -%}
+      {%- if adventure.data.featured -%}
+        {%- assign featured_count = featured_count | plus: 1 -%}
+        <li class="grid-layout">
+          <img
+            class="content-thumb"
+            src="/adventures/{{ adventure.fileSlug }}/thumb.png"
+            alt="{{ adventure.data.title | escape }}"
+          />
+          <div class="content-text">
+            <a class="content-link" href="{{ adventure.url }}">
+              <h4>
+                {{ adventure.data.title | escape }} {%- if adventure.data.system -%}({{ adventure.data.system | escape }}){%- endif -%}
+              </h4>
+            </a>
+            <p>{{ adventure.data.subtitle | escape }}</p>
+            {%- if adventure.data.external -%}
+            {% render "external-links.html", external: adventure.data.external %}
+            {%- endif -%}
+          </div>
+        </li>
       {%- endif -%}
-    </li>
-    {%- endif -%} {%- endfor -%}
+    {%- endfor -%}
   </ul>
 </div>
 

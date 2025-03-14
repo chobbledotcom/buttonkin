@@ -3,7 +3,27 @@ layout: default.html
 ---
 
 <div class="row">
-  <div class="col-md-9 page page--home margin--bottom main-content">{{ content }}</div>
+  <div class="col-md-9 page page--home margin--bottom main-content">
+    {{ content }}
+  
+    {%- include "subscribe.html" -%}
+    
+    <h2>Featured Releases</h2>
+    
+    {%- include "featured-items.html" -%}
+    
+    <div class="cta-buttons">
+      {% render "cta-button.html", url: "/games/", text: "View all games" %}
+      {% render "cta-button.html", url: "/adventures/", text: "View all adventures" %}
+    </div>
+    
+    <h2>Latest Posts</h2>
+    
+    {% assign posts = collections.post | reverse -%}
+    {%- assign limit = 2 -%}
+    {%- assign show_all_link = true -%}
+    {% include "post-list.html" %}
+  </div>
   <div class="col-md-3 centered">
     <img
       alt="a button person with a magic staff"

@@ -1,16 +1,12 @@
-<ul class="content-list">
+<ul class="content-list blog-list">
   {%- for post in posts limit: limit -%}
   <li>
-    <div class="post-date-container">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-    </div>
-    <div class="content-text">
-      <h5>
-        <a class="post-link" href="{{ post.url }}">{{ post.data.title | escape }}</a>
-      </h5>
-      <p>{{ post.data.subtitle | escape }}</p>
-    </div>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h5>
+      <a class="post-link" href="{{ post.url }}">{{ post.data.title | escape }}</a>
+    </h5>
+    <p>{{ post.data.subtitle | escape }}</p>
   </li>
   {%- endfor -%}
 </ul>

@@ -17,7 +17,7 @@ eleventyComputed:
       <ul class="content-list">
         {% assign content_items = collections[collection_name] | sort: 'data.order' %}
         {% for item in content_items %}
-        <li>
+        <li class="grid-layout">
           <img
             class="content-thumb"
             src="/{{ content_type }}/{{ item.fileSlug }}/thumb.png"
