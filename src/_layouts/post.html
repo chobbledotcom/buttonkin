@@ -15,12 +15,10 @@ layout: page.html
     </p>
     {% assign show_tags = tags | tags %}
     {% if show_tags %}
-      <p>
-        <strong>Tagged:</strong>
-        <em>
-          {% for tag in show_tags -%}{%- if forloop.first == false %}, {% endif %}
-          <a href="/tags/{{ tag.tag }}">{{ tag.name }}</a>{% endfor %}
-        </em>
+      <p class="tag-pills">
+        {% for tag in show_tags %}
+          <a href="/tags/{{ tag.tag }}">{{ tag.name }}</a>
+        {% endfor %}
       </p>
     {% endif %}
     
