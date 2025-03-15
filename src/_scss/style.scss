@@ -186,6 +186,7 @@ a {
   color: $dark-pink;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
   &:hover,
   &:active {
     color: $highlight;
@@ -278,7 +279,6 @@ a {
     }
 
     &__link {
-      margin: 0.3rem 0.5rem;
       font-size: 1rem;
     }
   }
@@ -303,6 +303,9 @@ a {
   margin: 30px auto;
   @include media-breakpoint-down(sm) {
     padding: 20px 15px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin: 5px;
   }
 }
 
@@ -504,7 +507,9 @@ hr {
 
     &:hover {
       img.content-thumb {
-        transform: scale(1.08) rotate(-2deg);
+        @include media-breakpoint-up(sm) {
+          transform: scale(1.08) rotate(-2deg);
+        }
       }
     }
   }
@@ -863,8 +868,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0 auto;
     gap: 0.2rem;
+    max-width: 80%;
   }
 
   .footer__icon {
