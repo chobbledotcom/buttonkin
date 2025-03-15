@@ -10,7 +10,7 @@
     <ul>
       {% assign posts = collections.post | reverse %}
       {% for p in posts %}
-        {% if forloop.index < 4 %}
+        {% if forloop.index < 5 %}
           <li>
             <a href="{{ p.url | escape }}">
               {{ p.data.title | escape }}<br />
