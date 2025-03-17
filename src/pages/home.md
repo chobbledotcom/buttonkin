@@ -3,6 +3,8 @@ layout: home.html
 order: 0
 metaTitle: "Button Kin Games"
 permalink: "/"
+linkText: Home
+icon: home
 ---
 
 # Button Kin Games
