@@ -20,6 +20,10 @@ reviews:
       author: "Sam H.",
     },
   ]
+specs:
+  System: D&D 5e
+  Players: 3-6 Players at Level 1-3
+  Game Time: 4-6 Hours
 ---
 
 On the world's first offshore rig Captain Seaslick and his crew are drilling for dragon essence - a rare and valuable substance often called Red Gold. They're about to be filthy rich, but not everyone's happy for them.

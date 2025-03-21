@@ -12,6 +12,10 @@ itch_widget:
     src: "https://itch.io/embed/3022975?link_color=f7c877",
     url: "https://buttonkin.itch.io/flora-and-llama",
   }
+specs:
+  System: Drama LLamas
+  Players: 3-5 and a "Producer"
+  Game Time: 3-5 hours
 ---
 
 <p>

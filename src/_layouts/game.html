@@ -10,36 +10,45 @@ layout: page.html
   </div>
   {% endif %}
 
-  {% if system %}
-  <h6>System: {{system | escape}}</h6>
-  {% endif %} 
-  
-  {% if contentwarn %}
-  <p class="content-warn">Content warnings: {{contentwarn | escape}}</p>
-  {% endif %} 
+  {% if specs %}
+    <div class="game-header">
+      <div class="specs">
+        <p>
+          <strong>{{ subtitle }}</strong>
+        </p>
+        <ul class="specs-sheet">
+          {%- for spec in specs -%}
+            <li>
+              <strong>{{ spec[0] }}:</strong>
+              {{ spec[1] }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {% include "itch-widget.html" %}
+    </div>
+    {% if contentwarn %}
+      <p class="content-warn">
+        Content warnings: {{contentwarn | escape}}
+      </p>
+    {% endif %}
+  {% else %}
+    {% if system %}
+      <h6>System: {{system | escape}}</h6>
+    {% endif %}
+    {% if contentwarn %}
+      <p class="content-warn">
+        Content warnings: {{contentwarn | escape}}
+      </p>
+    {% endif %}
+    <p class="content-suitability">
+      Suitable for {{suitability | escape}}.
+    </p>
+    {% include "itch-widget.html" %}
+  {% endif %}
 
-  <p class="content-suitability">Suitable for {{suitability | escape}}.</p>
+  {{ content }}
 
-  {% if itch_widget %}
-   <div class="iframe-container">
-     <iframe
-       loading="lazy"
-       frameborder="0"
-       src="{{itch_widget.src}}?border_color=white"
-       class="itch-widget embedded-iframe"
-       referrerpolicy="strict-origin-when-cross-origin"
-       sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-       title="{{title | escape}} on itch.io"
-      >
-        <a href="{{itch_widget.url}}">
-          {{title | escape}}
-        </a>
-      </iframe>
-   </div>
-  {% endif %}  
-  
-  {{ content }} 
-  
   {% if reviews %}
   <div class="content-reviews">
     <h5>Kind words about <i>{{title | escape}}</i></h5>
@@ -51,7 +60,7 @@ layout: page.html
     {% endfor %}
   </div>
   {% endif %}
-  
+
   {% if external %}
   <div class="content-available">
     <h6>Get your copy:</h6>

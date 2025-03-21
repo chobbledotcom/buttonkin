@@ -2,7 +2,7 @@
 order: 3
 title: Llama Warrior
 system: Drama Llamas
-subtitle: A mighty drama llamas one shot for 3-5 players and a GM, or “Producer”
+subtitle: A mighty drama llamas one shot
 metaTitle: A Drama Llamas one-shot for 3-5 players and a Producer
 suitability: 3-5 players and a Producer. Around 3-5 hours of play
 external: [{ name: "Itch.io", url: "https://buttonkin.itch.io/llama-warrior" }]
@@ -11,6 +11,10 @@ itch_widget:
     src: "https://itch.io/embed/3022990?link_color=f7c877",
     url: "https://buttonkin.itch.io/llama-warrior",
   }
+specs:
+  System: Drama LLamas
+  Players: 3-5 and a "Producer"
+  Game Time: 3-5 hours
 ---
 
 <p>

@@ -28,6 +28,9 @@ itch_widget:
     src: "https://itch.io/embed/886539?link_color=f7c877",
     url: "https://buttonkin.itch.io/bumbling",
   }
+specs:
+  Players: Solo
+  Ages: 10 and up - younger children can play with a little guidance
 ---
 
 <p>

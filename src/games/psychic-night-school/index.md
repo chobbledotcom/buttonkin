@@ -17,6 +17,9 @@ itch_widget:
     src: "https://itch.io/embed/1110316?link_color=f7c877",
     url: "https://buttonkin.itch.io/psychic-night-school",
   }
+specs:
+  Ages: 12 and up. Younger children can play with a little guidance.
+  Players: 3-6. Larger groups with a little patience.
 ---
 
 <p><i>Did you ever feel like you could read someone's mind?</i></p>

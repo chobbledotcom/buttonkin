@@ -21,9 +21,13 @@ reviews:
       author: "Andrés L.",
     },
   ]
+specs:
+  System: D&D 5e
+  Players: 3-6 Players at Level 7-9
+  Game Time: 8-12 Hours
 ---
 
-![](marie.png){style="width:200px;float:left;margin:-10px;"}
+![](marie.png)
 
 A haunted house, a missing person, a hint of wild fey magic, and an unexpected love story.
 

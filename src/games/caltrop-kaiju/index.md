@@ -17,6 +17,9 @@ itch_widget:
     src: "https://itch.io/embed/1506445?link_color=f7c877",
     url: "https://buttonkin.itch.io/caltrop-kaiju",
   }
+specs:
+  Players: Solo
+  Ages: 10 and up - younger children can play with a little guidance
 ---
 
 <img src="kaiju_map.png" style="width:300px;float:right;border-radius:4px;margin-left:10px;margin-bottom: 10px;" alt="">

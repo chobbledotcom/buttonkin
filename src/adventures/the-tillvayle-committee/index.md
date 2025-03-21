@@ -21,6 +21,10 @@ itch_widget:
     src: "https://itch.io/embed/1460855?link_color=f7c877",
     url: "https://buttonkin.itch.io/the-tillvayle-committee",
   }
+specs:
+  System: D&D 5e
+  Players: 3-4 Players at Level 7-9
+  Game Time: 4-6 Hours
 ---
 
 <p>

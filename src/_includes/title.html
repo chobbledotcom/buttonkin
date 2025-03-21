@@ -3,6 +3,9 @@
 	<h1 class="header__text">
 		{{ title | escape }}
 		<br>
+		{% if specs %}
+		  {% assign subtitle = false %}
+		{% endif %}
 		{% if subtitle %}
 			<div class="header__subtitle">
 				{{ subtitle }}

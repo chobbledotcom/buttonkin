@@ -11,6 +11,9 @@ itch_widget:
     src: "https://itch.io/embed/1422835?link_color=f7c877",
     url: "https://buttonkin.itch.io/righteous-jaunt",
   }
+specs:
+  Players: 2-4
+  Ages: 6+
 ---
 
 <p><b>

@@ -26,9 +26,12 @@ reviews:
   ]
 itch_widget:
   {
-    src: "https://itch.io/embed/2094843?link_color=f7c877",
+    src: "https://itch.io/embed/2094843?link_color=3e0b5d&border_color=ffffff",
     url: "https://buttonkin.itch.io/drama-llamas",
   }
+specs:
+  Ages: All
+  Player Count: 3-6 and a GM
 ---
 
 ![A llama presenter speaking into a microphone in front of a camera, which is being operated by a llama camera person](camera.png)

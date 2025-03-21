@@ -12,6 +12,10 @@ external:
       url: "https://www.dmsguild.com/product/387244/Timbrel-Sleets-Intrepid-Players",
     },
   ]
+specs:
+  System: D&D 5e
+  Players: 3-6 Players at Level 5-9
+  Game Time: 6-8 Hours
 ---
 
 <p>

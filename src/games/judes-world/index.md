@@ -11,6 +11,9 @@ itch_widget:
     src: "https://itch.io/embed/3083432?link_color=f7c877",
     url: "https://buttonkin.itch.io/judes-world",
   }
+specs:
+  Players: Solo
+  Age: 15+
 ---
 
 Take on the role of 12-year old Jude, who's desperate to grow up and certain that they'll do a better job of it than the so-called "adults" in their life. In fact, our protagonist just found out their parents, Mika and Jamie, are getting a dreaded divorce and they are NOT inclined to take it lightly.

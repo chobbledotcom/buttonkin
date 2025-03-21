@@ -12,6 +12,10 @@ external:
       url: "https://www.dmsguild.com/product/387243/The-Lyric-Grove",
     },
   ]
+specs:
+  System: D&D 5e
+  Players: 3-6 Players at Level 5-9
+  Game Time: 3-5 Hours
 ---
 
 <p>
