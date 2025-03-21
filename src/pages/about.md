@@ -6,10 +6,10 @@ order: 1
 metaTitle: "About Button Kin Games"
 icon: about
 title: "About Button Kin Games"
-subtitle: "A small games publisher based in Manchester, UK"
+subtitle: "A small games studio based in Manchester, UK"
 ---
 
-Button Kin Games is a small independent TTRPG publisher based in Manchester, UK. It was established in 2020 as an imprint for works by Yvris Burke, covering her adventure content for more traditional systems as well as her stand alone roleplaying games.
+Button Kin Games is a small independent TTRPG studio based in Manchester, UK. It was established in 2020 as an imprint for works by Yvris Burke, covering her adventure content for more traditional systems as well as her stand alone roleplaying games.
 
 ![Yvris Burke at a TTRPG convention](/assets/images/alex.jpg)
 

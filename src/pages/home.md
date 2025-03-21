@@ -5,9 +5,9 @@ metaTitle: "Button Kin Games"
 permalink: "/"
 linkText: Home
 icon: home
+title: Button Kin Games
+subtitle: A One-Woman Games Studio from Yvris Burke
 ---
-
-# Button Kin Games
 
 Established in 2020 by game designer, writer, and web developer, Yvris Burke, Button Kin Games is home to whimsical and strange [TTRPGs with unusual themes](/games/), and a smattering of [D&D 5e content](/adventures/).
 

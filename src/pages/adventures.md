@@ -6,5 +6,5 @@ order: 3
 metaTitle: "Adventures for popular TTRPGs and role-playing systems"
 icon: fire
 title: "Adventures"
-subtitle: "Adventures for role-playing games"
+subtitle: "Content for games"
 ---
