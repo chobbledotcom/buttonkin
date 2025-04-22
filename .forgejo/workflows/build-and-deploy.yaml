@@ -11,6 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build SCSS
+        run: |
+          sass --update src/_scss:_site/css --style compressed
+
       - name: Build with Node
         run: |
           npm install
