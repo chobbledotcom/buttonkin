@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rm -rf _site
-yarn eleventy --serve &
+npx @11ty/eleventy --serve &
 ELEVENTY_PID=$!
 sass --watch src/_scss:_site/css --style compressed &
 SASS_PID=$!

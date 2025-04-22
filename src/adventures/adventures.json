@@ -1,5 +1,5 @@
 {
-  "tags": "adventure",
-  "layout": "game.html",
-  "permalink": "/{{ page.fileSlug }}/"
+	"tags": "adventure",
+	"layout": "game.html",
+	"permalink": "/{{ page.fileSlug }}/"
 }

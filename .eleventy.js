@@ -80,11 +80,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("gallery", function (dir = "") {
     return fg.sync(dir);
   });
-  
+
   eleventyConfig.addFilter("file_exists", function (filepath) {
-    return fs.existsSync(filepath.replace(/^\//, './src/'));
+    return fs.existsSync(filepath.replace(/^\//, "./src/"));
   });
-  
+
   eleventyConfig.addFilter("append", function (str, append) {
     return str + append;
   });
