@@ -4,7 +4,8 @@
 {% assign cover_jpg_path = page_dir | append: '/cover.jpg' | replace: './src', '' %}
 
 <img
-  sizes="50vw"
+  sizes="100vw"
+  eleventy:widths="300,721,1000"
   alt=""
   class="cover-image"
   {% if cover_png_path | file_exists %}

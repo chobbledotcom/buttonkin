@@ -4,6 +4,11 @@
       class="content-thumb"
       src="/{{ source_path }}/{{ item.fileSlug }}/thumb.png"
       alt="{{ item.data.title | escape }}"
+      sizes="
+        (min-width: 780px) 200px,
+        (min-width: 580px) 486px,
+        calc(100vw - 54px)
+      "
     />
   </a>
   <div class="content-text">
