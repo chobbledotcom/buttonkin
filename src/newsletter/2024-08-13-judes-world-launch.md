@@ -2,6 +2,9 @@
 title: Jude's World campaign is LIVE!
 subtitle: Don't. Panic.
 metaTitle: August 2024 newsletter from Button Kin Games
+tags:
+  - judes-world
+  - development-diary
 ---
 
 <p>

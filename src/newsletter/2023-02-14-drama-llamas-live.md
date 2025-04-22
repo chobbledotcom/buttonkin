@@ -2,6 +2,9 @@
 title: Drama Llamas is Live!
 subtitle: Llamas assemble!
 metaTitle: February 2023 newsletter from Button Kin Games
+tags:
+  - drama-llamas
+  - development-diary
 ---
 
 <p>

@@ -2,6 +2,10 @@
 title: Windswept September
 subtitle: Tabletop Scotland Review, Maps Freebie, plus Streaming News
 metaTitle: September 2022 newsletter from Button Kin Games
+tags:
+  - conventions
+  - drama-llamas
+  - bumbling
 ---
 
 <p>

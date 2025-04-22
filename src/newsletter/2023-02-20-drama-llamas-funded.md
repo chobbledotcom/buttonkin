@@ -2,6 +2,9 @@
 title: Drama Llamas is Funded!
 subtitle: claps hooves in excitement
 metaTitle: Kickstarter Announcement from Button Kin Games
+tags:
+  - drama-llamas
+  - development-diary
 ---
 
 <p>
