@@ -15,10 +15,10 @@ jobs:
         run: |
           sass --update src/_scss:_site/css --style compressed
 
-      - name: Build with Node
+      - name: Build with Yarn
         run: |
-          npm install
-          npx @11ty/eleventy
+          yarn install
+          yarn eleventy
 
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
