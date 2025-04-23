@@ -7,4 +7,5 @@ layout: "archive.html"
 permalink: "/newsletter/"
 redirect_from:
   - "/blog"
+  - "/archive"
 ---
