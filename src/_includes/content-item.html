@@ -1,6 +1,9 @@
 <li class="grid-layout">
   <a href="{{ item.url }}">
     <img
+      {% if index < 2 %}
+        loading="eager"
+      {% endif %}
       class="content-thumb"
       src="/{{ source_path }}/{{ item.fileSlug }}/thumb.png"
       alt="{{ item.data.title | escape }}"
