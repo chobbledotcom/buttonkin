@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
 		.addPassthroughCopy("src/assets")
 		.addPassthroughCopy("src/images")
 		.addPassthroughCopy("src/assets/pretty-atom-feed.xsl")
-		.addPassthroughCopy({ "src/assets/favicon/*": "/" });
+		.addPassthroughCopy({ "src/assets/favicon.ico": "/favicon.ico" });
 
 	eleventyConfig.addCollection("images", () => {
 		return images.map((i) => i.split("/")[2]).reverse();
