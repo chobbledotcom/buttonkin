@@ -7,7 +7,6 @@ tags:
   - the-tillvayle-committee
   - caltrop-kaiju
   - conventions
-  - development-diary
 ---
 
 <p>

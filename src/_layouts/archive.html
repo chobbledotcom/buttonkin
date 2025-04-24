@@ -7,7 +7,6 @@ layout: default.html
     {% include "title.html" %}
     <div class="page {{page.cssClass}}">
       {%- assign posts = collections.post | reverse -%}
-      {%- assign limit = 9999 -%}
       {%- assign show_all_link = false -%}
       {% include "post-list.html" %}
     </div>

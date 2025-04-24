@@ -4,7 +4,6 @@ subtitle: Don't. Panic.
 metaTitle: August 2024 newsletter from Button Kin Games
 tags:
   - judes-world
-  - development-diary
 ---
 
 <p>

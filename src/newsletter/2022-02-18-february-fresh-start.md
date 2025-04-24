@@ -4,7 +4,6 @@ subtitle: Bard-themed releases for D&D, new website, and some free "card" games!
 metaTitle: February 2022 newsletter from Button Kin Games
 tags:
   - bardic-origins
-  - development-diary
 ---
 
 <div class="available-content ">

@@ -7,7 +7,6 @@ tags:
   - bumbling
   - caltrop-kaiju
   - conventions
-  - development-diary
 ---
 
 <p>

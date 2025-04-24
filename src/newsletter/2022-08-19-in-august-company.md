@@ -5,7 +5,6 @@ metaTitle: August 2022 newsletter from Button Kin Games
 tags:
   - conventions
   - drama-llamas
-  - development-diary
   - the-tillvayle-committee
   - psychic-night-school
 ---
