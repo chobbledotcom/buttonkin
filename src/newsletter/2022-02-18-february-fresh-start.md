@@ -1,7 +1,7 @@
 ---
 title: February Fresh Start
 subtitle: Bard-themed releases for D&D, new website, and some free "card" games!
-metaTitle: February 2022 newsletter from Button Kin Games
+metaTitle: "D&D 5e Bard Adventures & Free Dice Card Games"
 tags:
   - bardic-origins
 ---

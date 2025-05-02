@@ -1,7 +1,7 @@
 ---
 title: Which one July?
 subtitle: Odd Jobs Review, Drama Llamas, and a Public Transport Freebie
-metaTitle: July 2022 newsletter from Button Kin Games
+metaTitle: "Drama Llamas Playtesting, Odd Jobs TTRPG Review, and Convention Prep"
 tags:
   - drama-llamas
   - bumbling

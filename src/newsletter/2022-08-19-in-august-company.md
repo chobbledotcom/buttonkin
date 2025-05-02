@@ -1,7 +1,7 @@
 ---
 title: In August Company
 subtitle: Convention news, Into the Odd review, and a free dragon lair!
-metaTitle: August 2022 newsletter from Button Kin Games
+metaTitle: "Free D&D Dragon Lair Adventure with Map and Into the Odd Review"
 tags:
   - conventions
   - drama-llamas

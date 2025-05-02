@@ -1,7 +1,7 @@
 ---
 title: Drama Llamas is Funded!
 subtitle: claps hooves in excitement
-metaTitle: Kickstarter Announcement from Button Kin Games
+metaTitle: "Drama Llamas Kickstarter Successfully Funded with Stretch Goals"
 tags:
   - drama-llamas
 ---

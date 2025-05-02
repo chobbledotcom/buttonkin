@@ -1,7 +1,7 @@
 ---
 title: June know what?
 subtitle: Drama Llamas, Tillvayle Stream, Orbital Blues, and Homebrew Tarot Cards
-metaTitle: June 2022 newsletter from Button Kin Games
+metaTitle: "UK TTRPG Conventions, Drama Llamas Playtest, and Homebrew Tarot Cards"
 tags:
   - drama-llamas
   - the-tillvayle-committee

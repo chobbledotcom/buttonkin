@@ -1,7 +1,7 @@
 ---
 title: Drama Llamas is Live!
 subtitle: Llamas assemble!
-metaTitle: February 2023 newsletter from Button Kin Games
+metaTitle: "Drama Llamas Kickstarter Launch with ZineQuest 5 Project We Love"
 tags:
   - drama-llamas
 ---

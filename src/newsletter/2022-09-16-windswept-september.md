@@ -1,7 +1,7 @@
 ---
 title: Windswept September
 subtitle: Tabletop Scotland Review, Maps Freebie, plus Streaming News
-metaTitle: September 2022 newsletter from Button Kin Games
+metaTitle: "Tabletop Scotland Review and Drama Llamas TTRPG Updates"
 tags:
   - conventions
   - drama-llamas

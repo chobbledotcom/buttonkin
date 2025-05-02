@@ -1,7 +1,7 @@
 ---
 title: Jude's World campaign is LIVE!
 subtitle: Don't. Panic.
-metaTitle: August 2024 newsletter from Button Kin Games
+metaTitle: "Jude's World Solo Journaling Game Launches on Kickstarter"
 tags:
   - judes-world
 ---

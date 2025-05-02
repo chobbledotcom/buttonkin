@@ -1,7 +1,7 @@
 ---
 title: April Interlude
 subtitle: Quick update, free adventure, plus putting the "brew" in "homebrew"
-metaTitle: April 2022 newsletter from Button Kin Games
+metaTitle: "Free D&D 5e Murder Mystery and Magic Tea Homebrew Items"
 tags:
   - the-tillvayle-committee
   - bumbling
