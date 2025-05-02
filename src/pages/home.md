@@ -1,11 +1,11 @@
 ---
 layout: home.html
 order: 0
-metaTitle: "Button Kin Games"
+metaTitle: "Button Kin Games | Indie TTRPG Studio | Manchester, UK"
 permalink: "/"
 linkText: Home
 icon: home
-title: Button Kin Games | Indie TTRPG Studio | Manchester, UK
+title: "Button Kin Games"
 subtitle: A One-Woman Games Studio from Yvris Burke
 ---
 
