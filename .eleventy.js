@@ -1,10 +1,10 @@
-const path = require("path");
-const fs = require("fs");
-const sass = require("sass");
-const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
-
 module.exports = function (eleventyConfig) {
+  const path = require("path");
+  const fs = require("fs");
+  const sass = require("sass");
+  const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+  const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
   eleventyConfig.addWatchTarget("./src/**/*");
 
   eleventyConfig.addPlugin(feedPlugin, {
