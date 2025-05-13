@@ -13,6 +13,12 @@ cleanup_serve() {
   wait $SASS_PID 2>/dev/null
 }
 trap cleanup_serve EXIT INT TERM
-wait -n
-cleanup_serve
-trap - EXIT INT TERM
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS doesn't support wait -n
+  wait $ELEVENTY_PID $SASS_PID
+else
+  # Linux supports wait -n
+  wait -n
+  cleanup_serve
+  trap - EXIT INT TERM
+fi
