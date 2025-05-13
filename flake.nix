@@ -14,19 +14,18 @@
         system:
         let
           pkgs = import nixpkgs { system = system; };
-          dependencies = with pkgs; [
-            nodejs_23
-            sass
-          ];
-          nodeModules = pkgs.mkYarnModules {
+          dependencies = with pkgs; [ nodejs_23 ];
+          nodeModules = pkgs.buildNpmPackage {
             pname = "buttonkin-dependencies";
             version = "1.0.0";
-            packageJSON = ./package.json;
-            yarnLock = ./yarn.lock;
-            yarnFlags = [
-              "--frozen-lockfile"
-              "--ignore-platform"
-            ];
+            src = pkgs.runCommand "source" { } ''
+              mkdir -p $out
+              cp ${./package.json} $out/package.json
+              cp ${./package-lock.json} $out/package-lock.json
+            '';
+            npmDepsHash = "sha256-pxVj+GQ1PZ1J5oc/TGvIrq2DDLbwoIINqzQ2jOBhS9c=";
+            installPhase = "mkdir -p $out && cp -r node_modules $out/";
+            dontNpmBuild = true;
           };
 
           makeScript =
@@ -59,6 +58,8 @@
               cd $TMPDIR/build_dir
 
               cp -r $src/* .
+              cp -r $src/.image-cache .
+              chmod -R a+rwX .image-cache
               cp $src/.eleventy.js .
 
               ln -s ${nodeModules}/node_modules node_modules
@@ -72,6 +73,7 @@
             installPhase = ''
               mkdir -p $out
               mv $TMPDIR/build_dir/_site $out/
+              mv $TMPDIR/build_dir/.image-cache $out/
             '';
 
             dontFixup = true;
@@ -95,18 +97,19 @@
           dependencies = with pkgs; [
             biome
             nodejs_23
-            sass
           ];
 
-          nodeModules = pkgs.mkYarnModules {
+          nodeModules = pkgs.buildNpmPackage {
             pname = "buttonkin-dependencies";
             version = "1.0.0";
-            packageJSON = ./package.json;
-            yarnLock = ./yarn.lock;
-            yarnFlags = [
-              "--frozen-lockfile"
-              "--ignore-platform"
-            ];
+            src = pkgs.runCommand "source" { } ''
+              mkdir -p $out
+              cp ${./package.json} $out/package.json
+              cp ${./package-lock.json} $out/package-lock.json
+            '';
+            npmDepsHash = "sha256-pxVj+GQ1PZ1J5oc/TGvIrq2DDLbwoIINqzQ2jOBhS9c=";
+            installPhase = "mkdir -p $out && cp -r node_modules $out/";
+            dontNpmBuild = true;
           };
 
           makeScript =

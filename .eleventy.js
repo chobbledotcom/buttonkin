@@ -1,6 +1,7 @@
 const fg = require("fast-glob");
 const path = require("path");
 const fs = require("fs");
+const sass = require("sass");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
@@ -44,6 +45,27 @@ module.exports = function (eleventyConfig) {
         decoding: "async",
       },
       pictureAttributes: {},
+    },
+  });
+
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    compile: function (inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+      // Don’t compile file names that start with an underscore
+      if (parsed.name.startsWith("_")) {
+        return;
+      }
+
+      // Get the directory of the input file for relative imports
+      const dir = path.dirname(inputPath);
+
+      return function (data) {
+        return sass.compileString(inputContent, {
+          loadPaths: [dir],
+        }).css;
+      };
     },
   });
 
