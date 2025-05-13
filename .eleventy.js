@@ -1,11 +1,8 @@
-const fg = require("fast-glob");
 const path = require("path");
 const fs = require("fs");
 const sass = require("sass");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
-
-const images = fg.sync(["./src/**.png"]);
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/**/*");
@@ -75,10 +72,6 @@ module.exports = function (eleventyConfig) {
     .addPassthroughCopy("src/assets/pretty-atom-feed.xsl")
     .addPassthroughCopy({ "src/assets/favicon.ico": "/favicon.ico" });
 
-  eleventyConfig.addCollection("images", () => {
-    return images.map((i) => i.split("/")[2]).reverse();
-  });
-
   eleventyConfig.addFilter("dateToRfc822", function (date) {
     return new Date(date).toUTCString();
   });
@@ -94,10 +87,6 @@ module.exports = function (eleventyConfig) {
         });
     });
     return result;
-  });
-
-  eleventyConfig.addFilter("gallery", function (dir = "") {
-    return fg.sync(dir);
   });
 
   eleventyConfig.addFilter("file_exists", function (filepath) {
