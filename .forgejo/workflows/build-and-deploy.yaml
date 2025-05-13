@@ -14,6 +14,7 @@ jobs:
 
       - name: Build with NPX
         run: |
+          npm install
           npx @11ty/eleventy
 
       - name: Deploy to neocities
