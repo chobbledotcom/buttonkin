@@ -825,12 +825,7 @@ hr {
         aspect-ratio: 1;
         object-fit: cover;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
         border: 2px solid #f6d9e1;
-
-        &:hover {
-          transform: scale(1.05);
-        }
       }
 
       p {
