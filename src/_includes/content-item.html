@@ -22,8 +22,6 @@
       </h4>
     </a>
     <p>{{ item.data.subtitle | escape }}</p>
-    {% if item.data.external %}
-    {% render "external-links.html", external: item.data.external %}
-    {% endif %}
+    <div class="tell-me-more">{% render "cta-button.html", url: item.url, text: 'Tell me more >', external: false %}</div>
   </div>
 </li>
