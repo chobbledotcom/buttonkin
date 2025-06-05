@@ -17,6 +17,11 @@ itch_widget:
     src: "https://itch.io/embed/3022978?link_color=f7c877",
     url: "https://buttonkin.itch.io/beach-bar-a-llama",
   }
+products:
+  - name: Beach Bar-a-Llama
+    image: /assets/products/drama_llamas_beach_bar_a_llama.jpeg
+    price: £999
+    url: https://buy.stripe.com/14AdR9eWDbcCeYUby07N606
 specs:
   System: Drama Llamas
   Players: 3-5 and a "Producer"

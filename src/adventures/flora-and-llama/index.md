@@ -17,6 +17,11 @@ itch_widget:
     src: "https://itch.io/embed/3022975?link_color=f7c877",
     url: "https://buttonkin.itch.io/flora-and-llama",
   }
+products:
+  - name: Flora and Llama
+    image: /assets/products/drama_llamas_flora_and_llamas.jpeg
+    price: £999
+    url: https://buy.stripe.com/cNieVdaGn80q040eKc7N607
 specs:
   System: Drama Llamas
   Players: 3-5 and a "Producer"

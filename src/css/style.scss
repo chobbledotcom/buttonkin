@@ -4,8 +4,8 @@ $highlight: #004d3b !default;
 $light-pink: #f6d9e1;
 $dark-pink: #923a52;
 $dark-green: #226216;
-$text: #000 !default;
-$header: #000 !default;
+$text: #111 !default;
+$header: #111 !default;
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 @import "bootstrap/functions";
@@ -309,14 +309,19 @@ a {
   }
   @include media-breakpoint-down(xs) {
     margin: 5px;
+    width: auto;
   }
 }
 
 main {
-  padding: 2rem 0.75rem;
+  padding: 2rem 0;
   line-height: 1.8;
   color: $text;
   position: relative;
+
+  @media (min-width: 789px) {
+    padding: 2rem 0.75rem;
+  }
 
   .main-content {
     animation: fadeIn 0.8s ease-out forwards;
@@ -729,7 +734,7 @@ hr {
     padding: 0;
     border: none;
     border-radius: 10px;
-    background-color: #000;
+    background-color: #111;
   }
 }
 
@@ -740,7 +745,8 @@ hr {
   }
 }
 
-.games, .adventures {
+.games,
+.adventures {
   .tell-me-more {
     display: flex;
     flex-wrap: wrap;
@@ -763,11 +769,77 @@ hr {
 
   .external-links {
     display: inline;
-    a { margin-left: 1em; }
+    a {
+      margin-left: 1em;
+    }
   }
 
   .stripe-embeds {
-    text-align: right
+    stripe-buy-button {
+      max-width: 288px;
+      height: 359px;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        right: -10px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .products {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0 auto 2rem;
+
+    @media (min-width: 789px) {
+      gap: 1rem;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 6px;
+      border-radius: 8px;
+      justify-content: space-between;
+      width: calc(33.3% - (1rem / 3));
+
+      @media (min-width: 789px) {
+        width: calc(33.3% - (2rem / 3));
+      }
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+      img {
+        margin: 0;
+        width: calc(100%);
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: cover;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        border: 2px solid #f6d9e1;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: "Calistoga", display;
+      }
+    }
   }
 
   .game-header {

@@ -15,9 +15,9 @@ external:
     },
   ]
 stripe_btn_ids:
-  - 'buy_btn_1RWf8VDh800dSfJPCY2MMkDO'
-  - 'buy_btn_1RWkyADh800dSfJPymB7fpmT'
-  - 'buy_btn_1RWkz9Dh800dSfJPl174nAJT'
+  - "buy_btn_1RWf8VDh800dSfJPCY2MMkDO"
+  - "buy_btn_1RWkyADh800dSfJPymB7fpmT"
+  - "buy_btn_1RWkz9Dh800dSfJPl174nAJT"
 reviews:
   [
     {
@@ -34,6 +34,19 @@ itch_widget:
     src: "https://itch.io/embed/2094843?link_color=3e0b5d&border_color=ffffff",
     url: "https://buttonkin.itch.io/drama-llamas",
   }
+products:
+  - name: Drama Llamas
+    image: /assets/products/drama_llamas.jpeg
+    price: £15
+    url: https://buy.stripe.com/5kQ14n15NbcCdUQby07N600
+  - name: Drama Llamas + 3 one shots
+    image: /assets/products/drama_llamas_postcard_bundle.jpeg
+    price: £20
+    url: https://buy.stripe.com/28E9ATcOv94u5okcC47N60d
+  - name: Drama Llamas one shot bundle
+    image: /assets/products/drama_llamas_postcard_bundle.jpeg
+    price: £10
+    url: https://buy.stripe.com/9B64gz9CjbcCdUQby07N605
 specs:
   Ages: All
   Player Count: 3-6 and a GM

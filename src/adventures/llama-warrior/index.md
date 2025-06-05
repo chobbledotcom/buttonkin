@@ -16,6 +16,11 @@ itch_widget:
     src: "https://itch.io/embed/3022990?link_color=f7c877",
     url: "https://buttonkin.itch.io/llama-warrior",
   }
+products:
+  - name: Llama Warrior
+    image: /assets/products/drama_llamas_llama_warrior.jpeg
+    price: £999
+    url: https://buy.stripe.com/28E4gz29R1C2cQMfOg7N608
 specs:
   System: Drama Llamas
   Players: 3-5 and a "Producer"

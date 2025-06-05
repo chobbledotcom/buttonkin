@@ -8,14 +8,27 @@ suitability: a single player aged 15 and up
 featured: true
 external: [{ name: "Itch.io", url: "https://buttonkin.itch.io/judes-world" }]
 stripe_btn_ids:
-  - 'buy_btn_1RWkKBDh800dSfJP5OJni2hP'
-  - 'buy_btn_1RWk4GDh800dSfJPT4F0YMRW'
-  - 'buy_btn_1RWkQZDh800dSfJPPB9vvDei'
+  - "buy_btn_1RWkKBDh800dSfJP5OJni2hP"
+  - "buy_btn_1RWk4GDh800dSfJPT4F0YMRW"
+  - "buy_btn_1RWkQZDh800dSfJPPB9vvDei"
 itch_widget:
   {
     src: "https://itch.io/embed/3083432?link_color=f7c877",
     url: "https://buttonkin.itch.io/judes-world",
   }
+products:
+  - name: Jude's World
+    image: /assets/products/judes_world_zine.jpeg
+    price: £10
+    url: https://buy.stripe.com/cNi00j6q74OecQM0Tm7N602
+  - name: Jude's World workbook
+    image: /assets/products/judes_world_workbook.jpeg
+    price: £5
+    url: https://buy.stripe.com/bJe3cvbKra8y4kg6dG7N603
+  - name: Jude's World bundle
+    image: /assets/products/judes_world_bundle.jpeg
+    price: £13
+    url: https://buy.stripe.com/fZuaEX15N6WmeYU8lO7N604
 specs:
   Players: Solo
   Age: 15+

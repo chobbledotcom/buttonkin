@@ -14,7 +14,7 @@ external:
     },
   ]
 stripe_btn_ids:
-  - 'buy_btn_1RWfAgDh800dSfJP4RTsbHAG'
+  - "buy_btn_1RWfAgDh800dSfJP4RTsbHAG"
 reviews:
   [
     {
@@ -31,6 +31,11 @@ itch_widget:
     src: "https://itch.io/embed/886539?link_color=f7c877",
     url: "https://buttonkin.itch.io/bumbling",
   }
+products:
+  - name: Bumbling
+    image: /assets/products/bumbling_booklet.jpeg
+    price: £4
+    url: https://buy.stripe.com/fZueVd01J4Oe2c859C7N601
 specs:
   Players: Solo
   Ages: All

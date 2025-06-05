@@ -14,12 +14,17 @@ external:
     },
   ]
 stripe_btn_ids:
-  - 'buy_btn_1RWl91Dh800dSfJPYHxktIoP'
+  - "buy_btn_1RWl91Dh800dSfJPYHxktIoP"
 itch_widget:
   {
     src: "https://itch.io/embed/1506445?link_color=f7c877",
     url: "https://buttonkin.itch.io/caltrop-kaiju",
   }
+products:
+  - name: Caltrop Kaiju
+    image: /assets/products/caltrop_kaiju_booklet.jpeg
+    price: £4
+    url: https://buy.stripe.com/5kQ9AT4hZ0xY4kgfOg7N60c
 specs:
   Players: Solo
   Ages: All
@@ -29,4 +34,3 @@ specs:
   This is a solo TTRPG which can be played in ten minutes as a tense, tactical puzzle, or in a couple of hours as a journaling/story game.
 </p>
 <img src="kaiju_map.png" alt="a 7 by 7 grid with 6 populated squares containing icons: a nuclear power plant, a mountain, a bridge, a radio tower, a town hall, and a port. The port has one line drawn diagonally across its square.">
-

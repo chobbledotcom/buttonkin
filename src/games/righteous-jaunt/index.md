@@ -8,12 +8,17 @@ suitability: 2-4 players aged 6 and up
 external:
   [{ name: "Itch.io", url: "https://buttonkin.itch.io/righteous-jaunt" }]
 stripe_btn_ids:
-  - 'buy_btn_1RWlKZDh800dSfJP1YokNq9h'
+  - "buy_btn_1RWlKZDh800dSfJP1YokNq9h"
 itch_widget:
   {
     src: "https://itch.io/embed/1422835?link_color=f7c877",
     url: "https://buttonkin.itch.io/righteous-jaunt",
   }
+products:
+  - name: Righteous Jaunt
+    image: /assets/products/righteous_jaunt_booklet.jpeg
+    price: £4
+    url: https://buy.stripe.com/28EbJ13dVa8ydUQatW7N60a
 specs:
   Players: 2-5
   Ages: 6+

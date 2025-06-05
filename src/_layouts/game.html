@@ -38,10 +38,9 @@ layout: page.html
     <h6>Get your digital copy: {% render "external-links.html", external: external %}</h6>
   {% endif %}
 
-  {% if stripe_btn_ids %}
-    {% include "stripe-embeds.html" %}
-  {% endif %}
-
+  {% include "stripe-embeds.html" %}
+  {% include "product-links.html" %}
+  
   {{ content }}
 
   {% if reviews %}

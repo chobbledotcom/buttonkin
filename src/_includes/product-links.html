@@ -1,0 +1,12 @@
+{% if products and products.length > 0 %}
+<h6>Get your physical copy:</h6>
+<div class="products">
+  {%- for product in products -%}
+  <a href="{{ product.url }}" class="btn btn-primary" target="_blank">
+    <img src="{{ product.image }}" alt="{{ product.name }}" />
+    <p class="product-name">{{ product.name }}</p>
+    <p class="price">{{ product.price }}</p>
+  </a>
+  {%- endfor -%}
+</div>
+{% endif %}
