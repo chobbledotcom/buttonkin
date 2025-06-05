@@ -1,0 +1,12 @@
+<h6>Get your physical copy (prices include UK postage):</h6>
+<div class="row stripe-embeds">
+  {%- for btn_id in stripe_btn_ids -%}
+    <div class="col-xs-12 col-md-6 col-lg-4 stripe-embed">
+      <stripe-buy-button
+        buy-button-id={{ btn_id }}
+        publishable-key="pk_live_51Ln0cXDh800dSfJPZ6z3wKNCp3HzBD1D69uETZD1sPlIiSBr27y7I2D5zyDvwyYjwQmgSkYqBGUJTLzYMjA9THId00zm2YInWN"
+      >
+      </stripe-buy-button>
+    </div>
+  {%- endfor -%}
+</div>

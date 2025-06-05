@@ -566,12 +566,6 @@ hr {
     }
   }
 
-  .external-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
   .cta-buttons {
     text-align: center;
     margin: 2rem 0;
@@ -745,10 +739,18 @@ hr {
     margin-top: -2rem;
   }
 }
+
+.games, .adventures {
+  .external-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
 .game {
   .content-available {
     display: flex;
-    align-items: center;
     gap: 1rem;
     margin: 0 auto 2rem;
     width: max-content;
@@ -757,16 +759,15 @@ hr {
       font-weight: 600;
       margin: 0;
     }
+  }
 
-    .external-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+  .external-links {
+    display: inline;
+    a { margin-left: 1em; }
+  }
 
-    &-top {
-      margin-top: -2rem;
-    }
+  .stripe-embeds {
+    text-align: right
   }
 
   .game-header {

@@ -3,29 +3,17 @@ layout: page.html
 ---
 
 <div class="content" itemprop="articleBody">
-  {% if external %}
-  <div class="content-available content-available-top">
-    <h6>Get your copy:</h6>
-    {% render "external-links.html", external: external %}
-  </div>
-  {% endif %}
-
   {% if specs %}
     <div class="game-header">
       <div class="specs">
-        <p>
-          <strong>{{ subtitle }}</strong>
-        </p>
-        <ul class="specs-sheet">
+        <p><strong>{{ subtitle }}</strong></p>
+        <p>{{ intro }}</p>
+        <div class="row">
           {%- for spec in specs -%}
-            <li>
-              <strong>{{ spec[0] }}:</strong>
-              {{ spec[1] }}
-            </li>
+            <div class="col-4"><strong>{{ spec[0] }}:</strong> {{ spec[1] }}</div>
           {%- endfor -%}
-        </ul>
+        </div>
       </div>
-      {% include "itch-widget.html" %}
     </div>
     {% if contentwarn %}
       <p class="content-warn">
@@ -44,7 +32,14 @@ layout: page.html
     <p class="content-suitability">
       Suitable for {{suitability | escape}}.
     </p>
-    {% include "itch-widget.html" %}
+  {% endif %}
+
+  {% if external %}
+    <h6>Get your digital copy: {% render "external-links.html", external: external %}</h6>
+  {% endif %}
+
+  {% if stripe_btn_ids %}
+    {% include "stripe-embeds.html" %}
   {% endif %}
 
   {{ content }}
@@ -62,9 +57,6 @@ layout: page.html
   {% endif %}
 
   {% if external %}
-  <div class="content-available">
-    <h6>Get your copy:</h6>
-    {% render "external-links.html", external: external %}
-  </div>
+    <h6>Get your digital copy: {% render "external-links.html", external: external %}</h6>
   {% endif %}
 </div>

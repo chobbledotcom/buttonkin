@@ -2,6 +2,7 @@
 order: 2
 title: Drama Llamas
 subtitle: A TTRPG about reality TV competitions and the fame-hungry llamas who compete in them
+intro: Welcome fellow llamas, and congratulations! You have been chosen from vast throngs of eager applicants to compete in the hottest new reality TV contest on the block. You have big dreams, the camera loves you, and whether your eye is on the prize, on lasting fame, or both, this show could be your big break. You must seize this opportunity with both hooves!
 metaTitle: A chaotic, comedic TTRPG about llamas on reality TV
 suitability: 3-6 players of all ages and a GM
 featured: true
@@ -13,6 +14,10 @@ external:
       url: "https://www.drivethrurpg.com/product/439682/Drama-Llamas",
     },
   ]
+stripe_btn_ids:
+  - 'buy_btn_1RWf8VDh800dSfJPCY2MMkDO'
+  - 'buy_btn_1RWkyADh800dSfJPymB7fpmT'
+  - 'buy_btn_1RWkz9Dh800dSfJPl174nAJT'
 reviews:
   [
     {
@@ -34,11 +39,9 @@ specs:
   Player Count: 3-6 and a GM
 ---
 
-![A llama presenter speaking into a microphone in front of a camera, which is being operated by a llama camera person](camera.png)
-
-_Welcome fellow llamas, and congratulations! You have been chosen from vast throngs of eager applicants to compete in the hottest new reality TV contest on the block. You have big dreams, the camera loves you, and whether your eye is on the prize, on lasting fame, or both, this show could be your big break. You must seize this opportunity with both hooves!_
-
 Drama Llamas is a narrative driven TTRPG about reality TV competitions. Easy to plan and easy to play, the game contains everything you need to create (or recreate) the reality franchise of your dreams. The game is packed with genre tropes and chaos-generating mechanics, all with an absurdist, llama-flavoured twist.
+
+![A llama presenter speaking into a microphone in front of a camera, which is being operated by a llama camera person](camera.png)
 
 Want to know how it plays? Why not watch a game?
 
