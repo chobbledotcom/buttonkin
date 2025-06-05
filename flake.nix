@@ -23,7 +23,7 @@
               cp ${./package.json} $out/package.json
               cp ${./package-lock.json} $out/package-lock.json
             '';
-            npmDepsHash = "sha256-pxVj+GQ1PZ1J5oc/TGvIrq2DDLbwoIINqzQ2jOBhS9c=";
+            npmDepsHash = "sha256-FGMvzbHIkV/oOdqD7X3ULn0Vdi+1Exmxw+nmE5kTc6s=";
             installPhase = "mkdir -p $out && cp -r node_modules $out/";
             dontNpmBuild = true;
           };
@@ -107,7 +107,7 @@
               cp ${./package.json} $out/package.json
               cp ${./package-lock.json} $out/package-lock.json
             '';
-            npmDepsHash = "sha256-pxVj+GQ1PZ1J5oc/TGvIrq2DDLbwoIINqzQ2jOBhS9c=";
+            npmDepsHash = "sha256-FGMvzbHIkV/oOdqD7X3ULn0Vdi+1Exmxw+nmE5kTc6s=";
             installPhase = "mkdir -p $out && cp -r node_modules $out/";
             dontNpmBuild = true;
           };
