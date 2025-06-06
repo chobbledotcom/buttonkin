@@ -8,10 +8,6 @@ metaTitle: A Drama Llamas one-shot for 3-5 players and a Producer
 suitability: 3-5 players and a Producer. Around 3-5 hours of play
 external:
   [{ name: "Itch.io", url: "https://buttonkin.itch.io/beach-bar-a-llama" }]
-stripe_btn_ids:
-  - 'buy_btn_1RWlMlDh800dSfJPKTwqNrYb'
-  - 'buy_btn_1RWkz9Dh800dSfJPl174nAJT'
-  - 'buy_btn_1RWf8VDh800dSfJPCY2MMkDO'
 itch_widget:
   {
     src: "https://itch.io/embed/3022978?link_color=f7c877",
@@ -20,7 +16,7 @@ itch_widget:
 products:
   - name: Beach Bar-a-Llama
     image: /assets/products/drama_llamas_beach_bar_a_llama.jpeg
-    price: £999
+    price: £3
     url: https://buy.stripe.com/14AdR9eWDbcCeYUby07N606
 specs:
   System: Drama Llamas
