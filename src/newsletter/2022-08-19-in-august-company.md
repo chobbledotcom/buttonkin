@@ -16,7 +16,7 @@ tags:
 <p>
     This weekend I’ll be at Tabletop Scotland, just as a visitor and player. It’ll be my first time and I’ve heard good things about the friendliness of this con. I’ll be sure to report back next newsletter!
 </p><p>
-    In the meantime I’m getting close with my preparations for <a href="https://www.tabletopgaming.co.uk/information/tabletop-gaming-live" target="_blank">Tabletop Gaming Live</a> in Manchester this September - my first convention as a vendor! It’s been such a joyful process getting my games into print that I can almost convince myself that it doesn’t matter if I don’t sell any. Almost. If you’re coming down give me a shout! I’d love to say “hey” to some new faces.
+    In the meantime I'm getting close with my preparations for <a href="https://web.archive.org/web/20191110231705/https://www.tabletopgaming.co.uk/information/tabletop-gaming-live" target="_blank">Tabletop Gaming Live</a> (archive link) in Manchester this September - my first convention as a vendor! It's been such a joyful process getting my games into print that I can almost convince myself that it doesn't matter if I don't sell any. Almost. If you're coming down give me a shout! I'd love to say "hey" to some new faces.
 </p>
 <img src="/assets/images/newsletter/psn_tc_newsletter_preview.png" alt="print copies of Psychic Night School and The Tillvayle Committee in a box">
 <h4>Release Updates</h4>

@@ -21,7 +21,7 @@ tags:
     I've been prepping for my first ever convention as a vendor. The up front costs are sobering, but it's spurred me on to put some games into print for the first time, and that's been so special. I can't resist sharing a few photos, so here you go:
 </p>
 <img src="/assets/images/newsletter/bumbling_caltrop_kaihu_newsletter_preview.png" alt="print copies of Bumbling and Caltrop Kaiju in boxes and spread to show contents">
-<p>Catch us at <a href="https://www.tabletopgaming.co.uk/information/tabletop-gaming-live" target="_blank">Tabletop Gaming Live</a> in Manchester, September 17th and 18th!</p>
+<p>Catch us at <a href="https://web.archive.org/web/20191110231705/https://www.tabletopgaming.co.uk/information/tabletop-gaming-live" target="_blank">Tabletop Gaming Live</a> (archive link) in Manchester, September 17th and 18th!</p>
 <h4>TTRPGs for Good</h4>
 <p>
     Another month, another outrageous sign of the times we're living through. Even though we might have known Roe v. Wade's time was limited, and even though it's not the law of my home country that's affected, the sheer scale of the injustice being done to those at risk of unwanted pregnancy in the U.S. knocked the wind out of me. I know I'm not alone in that. Of course, and yet again, the indie community rallied to respond, resulting in the <a href="https://itch.io/b/1472/indie-bundle-for-abortion-funds" target="_blank">Indie Bundle for Abortion Funds</a>.

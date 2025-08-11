@@ -21,7 +21,7 @@ tags:
 {% render "youtube.html", id: "IDsO5fksWec?si=0BZCIL15qeBAC7sC" %}
 
 <p>
-    If you want more talk and less of my face, there’s this interview with Fiona over on the What Am I Rolling? podcast: <a href="https://www.wairpodcast.com/episodes/qayvrisburke" target="_blank">https://www.wairpodcast.com/episodes/qayvrisburke</a>
+    If you want more talk and less of my face, there's this interview with Fiona over on the What Am I Rolling? podcast: <a href="https://web.archive.org/web/20240814004126/https://www.wairpodcast.com/episodes/qayvrisburke" target="_blank">https://web.archive.org/web/20240814004126/https://www.wairpodcast.com/episodes/qayvrisburke</a> (archive link)
 </p><p>
     If you’d like to see the game being played you can catch up on Kat the Lore Mistress’ stream. She did a wonderful job of showcasing the basics:
 </p>
