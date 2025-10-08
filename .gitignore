@@ -131,11 +131,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# ---> Nix
-# Ignore build outputs from performing a nix-build or `nix build` command
-result
-result-*
-
 # ---> Eleventy
 # Built site
 _site

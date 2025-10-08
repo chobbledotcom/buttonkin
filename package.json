@@ -2,6 +2,10 @@
   "name": "buttonkin",
   "version": "1.0.0",
   "type": "commonjs",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.0",
